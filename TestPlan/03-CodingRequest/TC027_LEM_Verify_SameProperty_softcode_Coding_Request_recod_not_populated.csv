@@ -1,0 +1,32 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+1,Execute,,Login_RC:Log in to MS Dynamics App with LEM User,,,
+2,Execute,,Login_RC:Select MGM LEM Dynamics App from App List,,,
+3,Execute,,General_RC:Global Search_Search for a record,,,
+4,Execute,,Contacts_RC:Select Host Relationship tab,,,
+"//5",Execute,,CodingRequest_RC:Create New Host Relationship,,,Contacts_Entity
+6,lnk_New_CodingRequest,"Click the [<Object>] ",Click,,,Contacts_Entity
+7,Browser,Wait for [<Data>] milli seconds,pause,@8000,,
+8,Execute,,CodingRequest_RC:Select Coding Change Type option,,,
+9,Execute,,CodingRequest_RC:Select Relationship type option,,,
+10,Execute,,CodingRequest_RC:Fills the Requester Comment textbox and clicks on Save and Close button,%ReqComments%,,
+11,Browser,Scroll to bottom,scrollToBottom,,,Contacts_Entity
+"//12",txt_RequestComment,Assert if [<Object>] is present,assertElementTextContains,%ReqComments%,,CodingRequests_Entity
+13,lnk_New_CodingRequest,"Click the [<Object>] ",Click,,,Contacts_Entity
+14,Browser,Wait for [<Data>] milli seconds,pause,@8000,,
+15,Execute,,CodingRequest_RC:Select Coding Change Type option,,,
+16,Execute,,CodingRequest_RC:Select Relationship type option,,,
+17,Execute,,CodingRequest_RC:Fills the Requester Comment textbox and clicks on Save and Close button,,,
+18,Error_Msg_SameProperty,Highlight the element [<Object>],highlight,,,CodingRequests_Entity
+19,Error_Msg_SameProperty,Assert if [<Object>] is present,assertElementPresent,,,CodingRequests_Entity
+20,btn_Ok,"Click the [<Object>] ",Click,,,Tasks_View
+21,Browser,Wait for [<Data>] milli seconds,pause,@3000,,CodingRequests_Entity
+22,btn_Cancel,"Click the [<Object>] ",Click,,,CodingRequests_Entity
+23,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+24,btn_DiscardandContninue,"Click the [<Object>] ",clickByJS,,,CodingRequests_Entity
+25,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+"//26",Execute,,CodingRequest_RC:Delete Host Relationship,,,
+27,radio_btn_SelectTask,Click on [<Object>],clickByJS,,,Tasks_View
+28,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+29,1st_record_task_radio_button,Double click [<Object>] element,doubleClickElement,,,Tasks_View
+30,Browser,Wait for [<Data>] milli seconds,pause,@13000,,
+31,Execute,,Tasks_RC:Delete record from commandbar,,,

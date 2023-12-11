@@ -1,0 +1,15 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+1,chk_1st_Checkbox_button_CodingRequest,Wait for [<Object>] element to contain value: [<Data>],waitForElementToBePresent,,,Contacts_Entity
+2,Browser,Scroll to bottom,scrollToBottom,,,
+3,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+4,chk_1st_Checkbox_button_CodingRequest,"Click the [<Object>] ",doubleClickElement,,,Contacts_Entity
+5,Browser,Wait for [<Data>] milli seconds,pause,@13000,,
+6,lbl_Player,"Click the [<Object>] ",clickByJS,,,CodingRequests_Entity
+7,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+8,Browser,"Creating Random Variable ",VerifyRandomElementIsPresent,%SearchData%,//label[text()='Player']/../../../following-sibling::div//div[text()=';'],
+9,Browser,"Creating Random Variable ",VerifyRandomElementIsPresent,CodingRequest:CodingChangeType,//label[text()='Coding Change Type']/../../../following-sibling::div//select[@title=';'],
+10,Browser,Scroll to bottom,scrollToBottom,,,
+11,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+"//12",Browser,"Creating Random Variable ",VerifyRandomElementIsPresent,@Hard Code,//label[text()='Relationship Type']/../../../following-sibling::div//select[@title=';'],
+13,Browser,"Creating Random Variable ",VerifyRandomElementIsPresent,%ReqComments%,//label[text()='Requester Comments']/../../../following-sibling::div//textarea[text()=';'],
+14,txt_Approval_Status_Pending,Assert if [<Object>] is present,assertElementPresent,,,CodingRequest_View

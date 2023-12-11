@@ -1,0 +1,39 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+1,Execute,,Login_RC:Log in to MS Dynamics App with LEM User,,,
+2,Execute,,Login_RC:Select MGM Host Dynamics App from App List,,,
+3,Execute,,General_RC:Global Search_Search for a record,,,
+4,Execute,,Contacts_RC:Select Host Relationship tab,,,
+5,Execute,,CodingRequest_RC:Create New Host Relationship,,,
+6,lnk_New_CodingRequest,"Click the [<Object>] ",Click,,,Contacts_Entity
+7,Browser,Wait for [<Data>] milli seconds,pause,@8000,,
+8,Execute,,CodingRequest_RC:Select Relationship type option,,,
+9,Execute,,CodingRequest_RC:Select Coding Change Type option,,,
+10,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+11,Execute,,CodingRequest_RC:Fills the Requester Comment textbox and clicks on Save and Close button,,,
+"//12",Browser,Select Lookup field Item by providing Data to select and Object Id,MSCRM_SelectFromLookup,CodingRequest:ReassignT0,hsl_reassignedhost_id,
+13,lkp_ReassignTo,"Click the [<Object>] ",Click,,,CodingRequests_Entity
+14,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+15,Browser,Add a variable to access within testcase,AddVar,CodingRequest:ReassignT0,%Reassigned%,
+16,lkp_ReassignTo,Enter the value [<Data>] in the Field [<Object>],Set,CodingRequest:ReassignT0,,CodingRequests_Entity
+17,Browser,Wait for [<Data>] milli seconds,pause,@2000,@2000,
+18,btn_Search_Reassigned,"Click the [<Object>] ",Click,,,CodingRequests_Entity
+19,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+20,Browser,"Creating Random Variable ",ClickOnRandomElement,%Reassigned%,//span/span[text()=';'],
+21,btn_SaveAndClose,"Click the [<Object>] ",Click,,,CodingRequests_Entity
+22,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+23,Execute,,CodingRequest_RC:Verify Coding Request page all fields,,,
+24,Browser,Scroll to bottom,scrollToBottom,,,
+25,txt_RequestComment,Assert if [<Object>] is present,assertElementTextContains,%ReqComments%,,CodingRequests_Entity
+26,btm_Change_user,"Click the [<Object>] ",Click,,,AppList_Sitemap
+27,Browser,Wait for [<Data>] milli seconds,pause,@4000,,
+28,Execute,,Login_RC:Select MGM Admin Dynmics from app list,,,
+29,Execute,,CodingRequest_RC:Clicks on Coding Requests left side pannel,,,
+30,Execute,,CodingRequest_RC:Open 1st coding request and verify the Accept and Reject button present,,,
+31,Execute,,CodingRequest_RC:Verify that Coding request  Confllict option,,,
+32,cel_Coding_Conflict_No,Assert if [<Object>] is present,assertElementPresent,,,CodingRequest_View
+33,radio_btn_SelectTask,Click on [<Object>],clickByJS,,,Tasks_View
+34,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+35,Execute,,Tasks_RC:Delete record from commandbar,,,
+36,Execute,,General_RC:Global Search_Search for a record,,,
+37,Execute,,Contacts_RC:Select Host Relationship tab,,,
+38,Execute,,CodingRequest_RC:Delete Host Relationship,,,

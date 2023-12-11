@@ -1,0 +1,39 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+1,ddl_TaskOutCome,And  User verfies the Task Outcome option and select one option,highlight,,,Tasks_Entity
+2,ddl_TaskOutCome,Assert if [<Object>] is present,assertElementPresent,,,Tasks_Entity
+3,ddl_TaskOutCome,"Click the [<Object>] ",Click,,,Tasks_Entity
+4,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+5,opt_TaskOutcome_Option15,Assert if [<Object>] is present,assertElementPresent,,,Tasks_Entity
+6,opt_TaskOutcome_Option16,Assert if [<Object>] is not present,assertElementNotPresent,,,Tasks_Entity
+7,opt_TaskOutcome_Param,Set object [<Object>] property  as [<Data>] at runtime,setObjectProperty,@Already Booked,"#taskoutcomevalue",Tasks_Entity
+8,opt_TaskOutcome_Param,Assert if [<Object>] is present,assertElementPresent,,,Tasks_Entity
+9,opt_TaskOutcome_Param,Set object [<Object>] property  as [<Data>] at runtime,setObjectProperty,@Bad Contact Information,"#taskoutcomevalue",Tasks_Entity
+10,opt_TaskOutcome_Param,Assert if [<Object>] is present,assertElementPresent,,,Tasks_Entity
+11,opt_TaskOutcome_Param,Set object [<Object>] property  as [<Data>] at runtime,setObjectProperty,@Booked Event,"#taskoutcomevalue",Tasks_Entity
+12,opt_TaskOutcome_Param,Assert if [<Object>] is present,assertElementPresent,,,Tasks_Entity
+13,opt_TaskOutcome_Param,Set object [<Object>] property  as [<Data>] at runtime,setObjectProperty,@Booked Room,"#taskoutcomevalue",Tasks_Entity
+14,opt_TaskOutcome_Param,Assert if [<Object>] is present,assertElementPresent,,,Tasks_Entity
+15,opt_TaskOutcome_Param,Set object [<Object>] property  as [<Data>] at runtime,setObjectProperty,@Booked Room & Event,"#taskoutcomevalue",Tasks_Entity
+16,opt_TaskOutcome_Param,Assert if [<Object>] is present,assertElementPresent,,,Tasks_Entity
+17,opt_TaskOutcome_Param,Set object [<Object>] property  as [<Data>] at runtime,setObjectProperty,@Left Message,"#taskoutcomevalue",Tasks_Entity
+18,opt_TaskOutcome_Param,Assert if [<Object>] is present,assertElementPresent,,,Tasks_Entity
+19,opt_TaskOutcome_Param,Set object [<Object>] property  as [<Data>] at runtime,setObjectProperty,@Linked Player,"#taskoutcomevalue",Tasks_Entity
+20,opt_TaskOutcome_Param,Assert if [<Object>] is present,assertElementPresent,,,Tasks_Entity
+21,opt_TaskOutcome_Param,Set object [<Object>] property  as [<Data>] at runtime,setObjectProperty,@Low Worth,"#taskoutcomevalue",Tasks_Entity
+22,opt_TaskOutcome_Param,Assert if [<Object>] is present,assertElementPresent,,,Tasks_Entity
+23,opt_TaskOutcome_Param,Set object [<Object>] property  as [<Data>] at runtime,setObjectProperty,@Made Contact,"#taskoutcomevalue",Tasks_Entity
+24,opt_TaskOutcome_Param,Assert if [<Object>] is present,assertElementPresent,,,Tasks_Entity
+25,opt_TaskOutcome_Param,Set object [<Object>] property  as [<Data>] at runtime,setObjectProperty,@No Response,"#taskoutcomevalue",Tasks_Entity
+26,opt_TaskOutcome_Param,Assert if [<Object>] is present,assertElementPresent,,,Tasks_Entity
+27,opt_TaskOutcome_Param,Set object [<Object>] property  as [<Data>] at runtime,setObjectProperty,@Relationship Building,"#taskoutcomevalue",Tasks_Entity
+28,opt_TaskOutcome_Param,Assert if [<Object>] is present,assertElementPresent,,,Tasks_Entity
+29,opt_TaskOutcome_Param,Set object [<Object>] property  as [<Data>] at runtime,setObjectProperty,@Reported as Deceased,"#taskoutcomevalue",Tasks_Entity
+30,opt_TaskOutcome_Param,Assert if [<Object>] is present,assertElementPresent,,,Tasks_Entity
+31,opt_TaskOutcome_Param,Set object [<Object>] property  as [<Data>] at runtime,setObjectProperty,@Request Uncode,"#taskoutcomevalue",Tasks_Entity
+32,opt_TaskOutcome_Param,Assert if [<Object>] is present,assertElementPresent,,,Tasks_Entity
+33,opt_TaskOutcome_Param,Set object [<Object>] property  as [<Data>] at runtime,setObjectProperty,@Warm Lead,"#taskoutcomevalue",Tasks_Entity
+34,opt_TaskOutcome_Param,Assert if [<Object>] is present,assertElementPresent,,,Tasks_Entity
+35,opt_TaskOutcome_Param,Set object [<Object>] property  as [<Data>] at runtime,setObjectProperty,@Will Not Travel,"#taskoutcomevalue",Tasks_Entity
+36,opt_TaskOutcome_Param,Assert if [<Object>] is present,assertElementPresent,,,Tasks_Entity
+37,ddl_TaskOutCome,"Click the [<Object>] ",selectByVisibleText,@Will Not Travel,,Tasks_Entity
+38,Browser,Wait for [<Data>] milli seconds,pause,@2000,,

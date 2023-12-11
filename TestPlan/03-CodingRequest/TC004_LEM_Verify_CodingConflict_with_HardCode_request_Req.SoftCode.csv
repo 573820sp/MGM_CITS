@@ -1,0 +1,28 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+1,Execute,,Login_RC:Log in to MS Dynamics App with LEM User,,,
+2,Execute,,Login_RC:Select MGM LEM Dynamics App from App List,,,
+3,Execute,,General_RC:Global Search_Search for a record,,,
+4,Execute,,Contacts_RC:Select Host Relationship tab,,,
+5,Execute,,CodingRequest_RC:Create New Host Relationship,,,
+6,lnk_New_CodingRequest,"Click the [<Object>] ",Click,,,Contacts_Entity
+7,Browser,Wait for [<Data>] milli seconds,pause,@8000,,
+8,Execute,,CodingRequest_RC:Select Relationship type option,,,
+9,Execute,,CodingRequest_RC:Select Coding Change Type option,,,
+10,Execute,,CodingRequest_RC:Fills the Requester Comment textbox and clicks on Save and Close button,,,
+11,Execute,,CodingRequest_RC:Verify Coding Request page all fields,,,
+12,Browser,Scroll to bottom,scrollToBottom,,,
+13,txt_RequestComment,Assert if [<Object>] is present,assertElementTextContains,%ReqComments%,,CodingRequests_Entity
+14,btm_Change_user,"Click the [<Object>] ",Click,,,AppList_Sitemap
+15,Browser,Wait for [<Data>] milli seconds,pause,@4000,,
+16,Execute,,Login_RC:Select MGM Admin Dynmics from app list,,,
+17,Execute,,CodingRequest_RC:Clicks on Coding Requests left side pannel,,,
+18,Execute,,CodingRequest_RC:Open 1st coding request and verify the Accept and Reject button present,,,
+19,Execute,,CodingRequest_RC:Verify that Coding request  Confllict option,,,
+20,cel_Coding_Conflict_yes,Assert if [<Object>] is present,assertElementPresent,,,CodingRequest_View
+"//21",Cel_coding_conflict_yes2,Assert if [<Object>] is present,assertElementPresent,,,CodingRequest_View
+22,radio_btn_SelectTask,Click on [<Object>],clickByJS,,,Tasks_View
+23,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+24,Execute,,Tasks_RC:Delete record from commandbar,,,
+25,Execute,,General_RC:Global Search_Search for a record,,,
+26,Execute,,Contacts_RC:Select Host Relationship tab,,,
+27,Execute,,CodingRequest_RC:Delete Host Relationship,,,

@@ -1,0 +1,107 @@
+<Root ref="MGM" type="RC">
+<Folder ref="LEM_Reusables">
+<Scenario ref="CodingRequest_RC">
+<TestCase exeType="Executable" ref="Clicks on Coding Requests left side pannel"/>
+<TestCase exeType="Executable" ref="Create New Host Relationship"/>
+<TestCase exeType="Executable" ref="Delete Coding Request"/>
+<TestCase exeType="Executable" ref="Delete Host Relationship"/>
+<TestCase exeType="Executable" ref="Fills the Requester Comment textbox and clicks on Save and Close button"/>
+<TestCase exeType="Executable" ref="Open 1st coding request and verify the Accept and Reject button present"/>
+<TestCase exeType="Executable" ref="Select Coding Change Type option"/>
+<TestCase exeType="Executable" ref="Select Relationship type option"/>
+<TestCase exeType="Executable" ref="Verifies all the fields in Coding Request popup"/>
+<TestCase exeType="Executable" ref="Verifies default values on Coding Request popup from ContactLite page"/>
+<TestCase exeType="Executable" ref="Verifies that Coding Request Popup is not opened"/>
+<TestCase exeType="Executable" ref="Verifies that Coding Request popup should be opened"/>
+<TestCase exeType="Executable" ref="Verify Coding Request page all fields"/>
+<TestCase exeType="Executable" ref="Verify CodingRequest conflict is Yes"/>
+<TestCase exeType="Executable" ref="Verify that Coding request  Confllict option"/>
+</Scenario>
+<Scenario ref="ContactLookup_RC">
+<TestCase exeType="Executable" ref="Capture all Contact details from Contact Lite page"/>
+<TestCase exeType="Executable" ref="Clicks on ContactLookup button on left side panel"/>
+<TestCase exeType="Executable" ref="Recover the CIDL Data"/>
+<TestCase exeType="Executable" ref="Search Email address in contact lookup"/>
+<TestCase exeType="Executable" ref="Search Mgm id in contact loopup  for contact record"/>
+<TestCase exeType="Executable" ref="Search on Contact Lookup"/>
+<TestCase exeType="Executable" ref="Search Phone in contact lookup"/>
+<TestCase exeType="Executable" ref="Verifies Contact Lookup page all fields"/>
+<TestCase exeType="Executable" ref="Verifies Error Message should come with filling Invalid MGM Id"/>
+<TestCase exeType="Executable" ref="Verifies Error Message should come with filling wrong Email id"/>
+<TestCase exeType="Executable" ref="Verifies Error Message should come with filling wrong PhoneNumber"/>
+<TestCase exeType="Executable" ref="Verifies Multiple record in Contact Look up"/>
+<TestCase exeType="Executable" ref="Verifies the Error Message should come not filling the textbox"/>
+<TestCase exeType="Executable" ref="Verify CIDL Contact on Contact Lite page"/>
+</Scenario>
+<Scenario ref="Contacts_RC">
+<TestCase exeType="Executable" ref="Click on Contacts Entity"/>
+<TestCase exeType="Executable" ref="Create a Task from Contact"/>
+<TestCase exeType="Executable" ref="Open Task creation page"/>
+<TestCase exeType="Executable" ref="Select Host Relationship tab"/>
+<TestCase exeType="Executable" ref="Select Task and Preference Tab"/>
+<TestCase exeType="Executable" ref="Verifies all the columns in Contact viewlist"/>
+<TestCase exeType="Executable" ref="Verify Host relationship is Active"/>
+<TestCase exeType="Executable" ref="Verify the Reservation Request creation page"/>
+</Scenario>
+<Scenario ref="General_RC">
+<TestCase exeType="Executable" ref="Global Search_Search for a record"/>
+<TestCase exeType="Executable" ref="Reassign the record to another user"/>
+</Scenario>
+<Scenario ref="Login_RC">
+<TestCase exeType="Executable" ref="Log in to MS Dynamics App Manager User"/>
+<TestCase exeType="Executable" ref="Log in to MS Dynamics App with Host User"/>
+<TestCase exeType="Executable" ref="Log in to MS Dynamics App with LEM Admin User"/>
+<TestCase exeType="Executable" ref="Log in to MS Dynamics App with LEM User"/>
+<TestCase exeType="Executable" ref="Select MGM Admin Dynmics from app list"/>
+<TestCase exeType="Executable" ref="Select MGM Host Dynamics App from App List"/>
+<TestCase exeType="Executable" ref="Select MGM LEM Dynamics App from App List"/>
+<TestCase exeType="Executable" ref="Signout from Current User"/>
+</Scenario>
+<Scenario ref="Tasks_RC">
+<TestCase exeType="Executable" ref="Click on Assign Button"/>
+<TestCase exeType="Executable" ref="Click on Clone a Task"/>
+<TestCase exeType="Executable" ref="Click on Flow button"/>
+<TestCase exeType="Executable" ref="Click on Mark Complete button in commandbar"/>
+<TestCase exeType="Executable" ref="Click on OK button in Confirm Application of Workflow pop up"/>
+<TestCase exeType="Executable" ref="Click on Save button"/>
+<TestCase exeType="Executable" ref="Click on Task button in commandbar"/>
+<TestCase exeType="Executable" ref="Click on Task Entity"/>
+<TestCase exeType="Executable" ref="Click on Tasks View List"/>
+<TestCase exeType="Executable" ref="Clicks on Save and Close button"/>
+<TestCase exeType="Executable" ref="Create a Task"/>
+<TestCase exeType="Executable" ref="Delete record from commandbar"/>
+<TestCase exeType="Executable" ref="Fills Player Lookup field in the Task creation page"/>
+<TestCase exeType="Executable" ref="Fills Task Description Testbox in the Task creation page"/>
+<TestCase exeType="Executable" ref="Fills the Task Subject in the Task creation page"/>
+<TestCase exeType="Executable" ref="Open an existing compled Task"/>
+<TestCase exeType="Executable" ref="Reassign the Task to different user"/>
+<TestCase exeType="Executable" ref="Select Channel option Email"/>
+<TestCase exeType="Executable" ref="Select LEM Rejected option in TaskOutcome dropdown"/>
+<TestCase exeType="Executable" ref="Select My Completed Task"/>
+<TestCase exeType="Executable" ref="Select My Follow up Task option"/>
+<TestCase exeType="Executable" ref="Select My Task option"/>
+<TestCase exeType="Executable" ref="Select NBA Option"/>
+<TestCase exeType="Executable" ref="Select Outbound Outreach option"/>
+<TestCase exeType="Executable" ref="Select Past Due Option"/>
+<TestCase exeType="Executable" ref="Select Post check out option"/>
+<TestCase exeType="Executable" ref="Select Pre-Arrival option"/>
+<TestCase exeType="Executable" ref="Select Reported Deceased option in Task outcome Dropdown"/>
+<TestCase exeType="Executable" ref="Select Request uncode in Task outcome dropdown"/>
+<TestCase exeType="Executable" ref="Select Task Follow up Date from Calender"/>
+<TestCase exeType="Executable" ref="Select task in taskview"/>
+<TestCase exeType="Executable" ref="Verfies the Channel Dropdown all options and select one option"/>
+<TestCase exeType="Executable" ref="Verfies the Task completion Comment Textbox and fills some text"/>
+<TestCase exeType="Executable" ref="Verfies the Task Outcome option and select one option"/>
+<TestCase exeType="Executable" ref="Verifes that assigned User is changed in Task"/>
+<TestCase exeType="Executable" ref="Verifies Error Message while not filling the Comment texbox"/>
+<TestCase exeType="Executable" ref="Verifies Substatus value is Completed"/>
+<TestCase exeType="Executable" ref="Verifies Substatus value is In-progress"/>
+<TestCase exeType="Executable" ref="Verifies Task View list dropdown options"/>
+<TestCase exeType="Executable" ref="Verifies that clone Task has been created"/>
+<TestCase exeType="Executable" ref="Verify Close Acivity in task preference section"/>
+<TestCase exeType="Executable" ref="Verify Task outcome option and select one in VIP Host"/>
+<TestCase exeType="Executable" ref="Verify the ATT column in Task view"/>
+<TestCase exeType="Executable" ref="Verify tier status column"/>
+</Scenario>
+</Folder>
+</Root>

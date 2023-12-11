@@ -1,0 +1,15 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+1,Execute,,Login_RC:Log in to MS Dynamics App with LEM User,,,
+2,Execute,,Login_RC:Select MGM LEM Dynamics App from App List,,,
+"//3",Browser,Add a variable to access within testcase,AddVar,Tasks:Regarding,%SearchData%,
+4,Execute,,General_RC:Global Search_Search for a record,,,
+5,Execute,,Contacts_RC:Select Task and Preference Tab,,,
+6,Execute,,Contacts_RC:Open Task creation page,,,
+7,Execute,,Contacts_RC:Create a Task from Contact,,,
+8,Execute,,Tasks_RC:Click on Mark Complete button in commandbar,,,
+9,Execute,,Contacts_RC:Select Task and Preference Tab,,,
+10,hdr_TimelineRecord1,Assert if [<Object>]'s Text Contains [Ignorecase] [<Data>],assertElementTextIContains,%Subject%,,Contacts_Entity
+11,btn_Open_Record_Tp,"Click the [<Object>] ",Click,,,Contacts_Entity
+12,Browser,Wait for [<Data>] milli seconds,pause,@5000,,
+13,Browser,"Verify the Elemnet is present on the page for the Xpath provided. ",VerifyRandomElementIsPresent,%Subject%,//h1[text()=';'],
+14,Execute,,Tasks_RC:Delete record from commandbar,,,

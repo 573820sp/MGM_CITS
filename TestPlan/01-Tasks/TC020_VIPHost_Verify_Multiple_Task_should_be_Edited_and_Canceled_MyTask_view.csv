@@ -1,0 +1,27 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+1,Execute,,Login_RC:Log in to MS Dynamics App with LEM User,,,
+2,Execute,,Login_RC:Select MGM Host Dynamics App from App List,,,
+3,Execute,,Tasks_RC:Click on Task Entity,,,
+4,Execute,,Tasks_RC:Select task in taskview,,,
+5,Browser,"Select the option from MSCRM Commandbar. ",MSCRM_SelectCommandbarOption,@Edit,,
+6,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+7,Execute,,Tasks_RC:Fills the Task Subject in the Task creation page,,,
+8,Execute,,Tasks_RC:Fills Task Description Testbox in the Task creation page,,,
+9,ddl_Channel,Highlight the element [<Object>],selectByVisibleText,@Email,,Tasks_Entity
+10,Browser,Wait for [<Data>] milli seconds,pause,@1000,,
+11,ddl_TaskOutCome,"Click the [<Object>] ",selectByVisibleText,@Made Contact,,Tasks_Entity
+12,Execute,,Tasks_RC:Verfies the Task completion Comment Textbox and fills some text,,,
+13,btn_Save,"Click the [<Object>] ",Click,,,Tasks_Entity
+14,Browser,Wait for [<Data>] milli seconds,pause,@7000,,
+15,txt_FilterByKeyword,Enter the value [<Data>] in the Field [<Object>],Set,%Subject%,,Tasks_View
+16,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+17,btn_Arrow,"Click the [<Object>] ",Click,,,Tasks_View
+18,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+19,radio_btn_SelectTask,"Click the [<Object>] ",clickByJS,,,Tasks_View
+20,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+21,Browser,"Select the option from MSCRM Commandbar. ",MSCRM_SelectCommandbarOption,@Cancel,,
+22,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+23,Close_task_popup,Highlight the element [<Object>],highlight,,,Tasks_View
+24,Close_task_popup,Assert if [<Object>] is present,assertElementPresent,,,Tasks_View
+25,btn_closeTask,"Click the [<Object>] ",Click,,,Tasks_View
+26,Browser,Wait for [<Data>] milli seconds,pause,@3000,,

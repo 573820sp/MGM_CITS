@@ -1,0 +1,17 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+1,btn_Task_ViewSelector,"Click the [<Object>] ",waitForElementToBePresent,,30,Tasks_View
+2,btn_Task_ViewSelector,"Click the [<Object>] ",Click,,,Tasks_View
+3,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+4,Browser,Scroll to bottom,scrollToBottom,,,
+5,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+6,opt_CompletedTask_View,"Click the [<Object>] ",waitForElementToBePresent,,20,Tasks_View
+7,Browser,Wait for [<Data>] milli seconds,pause,@5000,,
+8,opt_CompletedTask_View,"Click the [<Object>] ",Click,,,Tasks_View
+9,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+10,Browser,Add a variable to access within testcase,AddVar,Tasks:Task_Name,%Subject%,
+11,txt_FilterByKeyword,Enter the value [<Data>] in the Field [<Object>],Set,%Subject%,,Tasks_View
+12,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+13,btn_Arrow,"Click the [<Object>] ",Click,,,Tasks_View
+14,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+15,Browser,"Creating Random Variable ",ClickOnRandomElement,%Subject%,"//a[contains(@aria-label,';')]",
+16,Browser,Wait for [<Data>] milli seconds,pause,@2000,,

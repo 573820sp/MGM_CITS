@@ -1,0 +1,15 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+1,ddl_AssignTo,"Click the [<Object>] ",Click,,,Tasks_Entity
+2,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+3,ddl_UserOrTeam,"Click the [<Object>] ",Click,,,Tasks_View
+4,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+5,lkp_UserOrTeam_Lookup,Enter the value [<Data>] in the Field [<Object>],Click,,,Tasks_View
+6,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+7,lkp_UserOrTeam_Lookup,Enter the value [<Data>] in the Field [<Object>],clear,,,Tasks_View
+8,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+9,lkp_UserOrTeam_Lookup,Enter the value [<Data>] in the Field [<Object>],Set,%ReassignTo%,,Tasks_View
+10,Browser,Wait for [<Data>] milli seconds,pause,@17000,,
+11,Browser,"Creating Random Variable ",ClickOnRandomElement,%ReassignTo%,"//li[contains(@aria-label,';')]",
+12,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+13,btn_Assign,"Click the [<Object>] ",Click,,,Tasks_View
+14,Browser,Wait for [<Data>] milli seconds,pause,@14000,,

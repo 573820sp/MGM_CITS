@@ -1,0 +1,9 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+1,btn_EditFilter,"Click the [<Object>] ",Click,,,Tasks_View
+2,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+3,txt_Filter_StatusActiveHost,Assert if [<Object>] is present,waitForElementToBePresent,,30,Contacts_View
+4,Browser,Wait for [<Data>] milli seconds,pause,@5000,,
+5,txt_Filter_StatusActiveHost,Assert if [<Object>] is present,assertElementPresent,,,Contacts_View
+6,txt_Filter_HostCurrentUser,Assert if [<Object>] is present,assertElementPresent,,,Contacts_View
+7,btn_Cancel_Edit_Filter,"Click the [<Object>] ",Click,,,Tasks_View
+8,Browser,Wait for [<Data>] milli seconds,pause,@3000,,

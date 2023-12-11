@@ -1,0 +1,6 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+1,hdr_ContactLookup,Assert if [<Object>] is present,assertElementPresent,,,ContactLookup
+2,txt_MGM_Rewards,Assert if [<Object>] is present,assertElementPresent,,,ContactLookup
+3,txt_Email,Assert if [<Object>] is present,assertElementPresent,,,ContactLookup
+4,txt_PhoneNumber,Assert if [<Object>] is present,assertElementPresent,,,ContactLookup
+5,btn_Search,Assert if [<Object>] is present,assertElementPresent,,,ContactLookup

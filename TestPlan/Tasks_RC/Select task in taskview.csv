@@ -1,0 +1,8 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+1,Browser,Wait for [<Data>] milli seconds,pause,@4000,,
+2,1st_record_task_radio_button,"Click the [<Object>] ",clickByJS,,,Tasks_View
+3,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+4,2nd_record_task_radio_button,"Click the [<Object>] ",clickByJS,,,Tasks_View
+5,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+6,3rd_record_task_radio_button,"Click the [<Object>] ",clickByJS,,,Tasks_View
+7,Browser,Wait for [<Data>] milli seconds,pause,@3000,,

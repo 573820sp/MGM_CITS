@@ -1,0 +1,7 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+1,Browser,"Select the option from MSCRM Commandbar. ",MSCRM_SelectCommandbarOption,@Delete,,
+2,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+"//3",hdr_Delete_Popup,Highlight the element [<Object>],highlight,,,Tasks_Entity
+"//4",hdr_Delete_Popup,Assert if [<Object>] is present,assertElementPresent,,,Tasks_Entity
+5,btn_Task_Delete,"Click the [<Object>] ",Click,,,Tasks_Entity
+6,Browser,Wait for [<Data>] milli seconds,pause,@7000,,

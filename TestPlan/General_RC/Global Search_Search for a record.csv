@@ -1,0 +1,15 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+"//1",txt_GlobalSearch,Highlight the element [<Object>],waitForElementToBePresent,,25,AppList_Sitemap
+2,Browser,"Refresh current page ",refreshDriver,,,
+3,Browser,Wait for [<Data>] milli seconds,pause,@14000,,
+4,Search_icon,Click on [<Object>],clickByJS,,,AppList_Sitemap
+5,Browser,Wait for [<Data>] milli seconds,pause,@14000,,
+6,txt_GlobalSearch,Highlight the element [<Object>],highlight,,,AppList_Sitemap
+7,Browser,Add a variable to access within testcase,AddVar,CodingRequest:ContactName,%SearchData%,
+8,txt_GlobalSearch,Enter the value [<Data>] in the Field [<Object>],Set,%SearchData%,,AppList_Sitemap
+9,Browser,Wait for [<Data>] milli seconds,pause,@6000,,
+10,button_showMoreResult_global_search,"Press [<Data>] key on keyboard ",clickByJS,,,AppList_Sitemap
+11,Browser,Wait for [<Data>] milli seconds,pause,@10000,,
+12,btn_GlobalSearchResult_Contact_PARAM,Set object [<Object>] property  as [<Data>] at runtime,setObjectProperty,%SearchData%,"#contactname",Contacts_View
+13,btn_GlobalSearchResult_Contact_PARAM,Set object [<Object>] property  as [<Data>] at runtime,ClickIfExists,,,Contacts_View
+14,Browser,Wait for [<Data>] milli seconds,pause,@16000,,

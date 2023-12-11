@@ -1,0 +1,24 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+1,txt_TaskSubject,And  User fills the Subject textbox in the Task creation page,Click,,,Tasks_Entity
+2,Browser,Wait for [<Data>] milli seconds,pause,@1000,,
+3,txt_TaskSubject,And  User fills the Subject textbox in the Task creation page,clear,,,Tasks_Entity
+4,Browser,Wait for [<Data>] milli seconds,pause,@1000,,
+"//5",Browser,Add a variable to access within testcase,AddVar,"=Date(0,ddMMyyhhmm):",%date%,
+6,Browser,"Creating Random Variable ",RandomVariableCreation,@Task_,%Subject%,
+7,txt_TaskSubject,Enter the value [<Data>] in the Field [<Object>],Set,%Subject%,,Tasks_Entity
+8,Browser,Wait for [<Data>] milli seconds,pause,@1000,,
+9,txt_TaskDescription,And  User fills Description Testbox in the Task creation page,Click,,,Tasks_Entity
+10,Browser,Wait for [<Data>] milli seconds,pause,@1000,,
+11,txt_TaskDescription,And  User fills Description Testbox in the Task creation page,clear,,,Tasks_Entity
+12,txt_TaskDescription,Enter the value [<Data>] in the Field [<Object>],Set,@This task is created from Test Automation,,Tasks_Entity
+13,Browser,Scroll to bottom,scrollToBottom,,,
+"//14",Browser,Add a variable to access within testcase,AddVar,Tasks:Regarding,%Contact%,
+"//15",txt_SelectedRegarding,Enter the value [<Data>] in the Field [<Object>],assertElementTextIContains,Tasks:Regarding,,Tasks_Entity
+16,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+17,ddl_Channel,Highlight the element [<Object>],selectByVisibleText,Tasks:Channel,,Tasks_Entity
+18,Browser,Wait for [<Data>] milli seconds,pause,@1000,,
+19,ddl_TaskOutCome,"Click the [<Object>] ",selectByVisibleText,Tasks:TaskOutcome,,Tasks_Entity
+20,Browser,Wait for [<Data>] milli seconds,pause,@1000,,
+21,txa_TaskCompletion_Comnts,Assert if [<Object>] is present,assertElementPresent,,,Tasks_Entity
+22,txa_TaskCompletion_Comnts,Enter the value [<Data>] in the Field [<Object>],Set,@This is Task completion comments,,Tasks_Entity
+23,Browser,Wait for [<Data>] milli seconds,pause,@1000,,

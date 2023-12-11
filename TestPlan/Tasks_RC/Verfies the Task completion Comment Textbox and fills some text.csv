@@ -1,0 +1,6 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+1,txa_TaskCompletion_Comnts,Assert if [<Object>] is present,assertElementPresent,,,Tasks_Entity
+2,txa_TaskCompletion_Comnts,Enter the value [<Data>] in the Field [<Object>],clear,,,Tasks_Entity
+3,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+4,txa_TaskCompletion_Comnts,Enter the value [<Data>] in the Field [<Object>],Set,@Test Automation Task,,Tasks_Entity
+5,Browser,Wait for [<Data>] milli seconds,pause,@3000,,

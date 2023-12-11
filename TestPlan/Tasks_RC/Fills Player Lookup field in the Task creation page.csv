@@ -1,0 +1,12 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+1,Browser,Scroll to bottom,scrollToBottom,,,
+2,Browser,Add a variable to access within testcase,AddVar,Tasks:Regarding,%Contact%,
+"//3",txt_Player,Enter the value [<Data>] in the Field [<Object>],Click,,,Task_Entity_Form
+"//4",Browser,Wait for [<Data>] milli seconds,pause,@12000,,
+"//5",txt_Player,Enter the value [<Data>] in the Field [<Object>],clear,,,Task_Entity_Form
+"//6",Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+"//7",txt_Player,Enter the value [<Data>] in the Field [<Object>],Set,%Contact%,,Task_Entity_Form
+"//8",Browser,Wait for [<Data>] milli seconds,pause,@15000,,
+"//9",Browser,"Creating Random Variable ",ClickOnRandomElement,%Contact%,//span/span[text()=';'],
+"//10",Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+11,Browser,"Select Lookup Item ",MSCRM_SelectFromLookup,%Contact%,regardingobjectid,

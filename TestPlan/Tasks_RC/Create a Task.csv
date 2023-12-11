@@ -1,0 +1,42 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+1,txt_TaskSubject,And  User fills the Subject textbox in the Task creation page,Click,,,Tasks_Entity
+2,Browser,Wait for [<Data>] milli seconds,pause,@1000,,
+3,txt_TaskSubject,And  User fills the Subject textbox in the Task creation page,clear,,,Tasks_Entity
+4,Browser,Wait for [<Data>] milli seconds,pause,@1000,,
+5,Browser,Add a variable to access within testcase,AddVar,"=Date(0,ddMMyyhhmm):",%date%,
+6,Browser,"Creating Random Variable ",AddVar,@Task_%date%,%Subject%,
+7,txt_TaskSubject,Enter the value [<Data>] in the Field [<Object>],Set,%Subject%,,Tasks_Entity
+8,Browser,Wait for [<Data>] milli seconds,pause,@1000,,
+9,txt_TaskDescription,And  User fills Description Testbox in the Task creation page,Click,,,Tasks_Entity
+10,Browser,Wait for [<Data>] milli seconds,pause,@1000,,
+11,txt_TaskDescription,And  User fills Description Testbox in the Task creation page,clear,,,Tasks_Entity
+12,txt_TaskDescription,Enter the value [<Data>] in the Field [<Object>],Set,@This task is created from Test Automation,,Tasks_Entity
+13,Browser,Scroll to bottom,scrollToBottom,,,
+14,Browser,Add a variable to access within testcase,AddVar,Tasks:Regarding,%Contact%,
+"//15",Browser,Scroll to bottom,scrollToBottom,,,
+"//16",Browser,Add a variable to access within testcase,AddVar,Tasks:Regarding,%Contact%,
+17,txt_Player,Enter the value [<Data>] in the Field [<Object>],Click,,,Tasks_Entity
+18,Browser,Wait for [<Data>] milli seconds,pause,@5000,,
+19,txt_Player,Enter the value [<Data>] in the Field [<Object>],clear,,,Tasks_Entity
+20,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+21,Browser,Scroll to bottom,scrollToBottom,,,
+22,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+23,Browser,Select Lookup Item by providing Data and Object Id,MSCRM_SelectFromLookup,%Contact%,regardingobjectid,
+"//24",txt_Player,Enter the value [<Data>] in the Field [<Object>],Set,%Contact%,,Tasks_Entity
+"//25",Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+"//26",lst_LookupListItem_PARAM,Set object [<Object>] property  as [<Data>] at runtime,setObjectProperty,%Contact%,"#itemtext",Tasks_Entity
+"//27",lst_LookupListItem_PARAM,Wait  for the element [<Object>] to be present,waitForElementToBePresent,,20,Tasks_Entity
+"//28",lst_LookupListItem_PARAM,Clear the element [<Object>],clickByJS,,,Tasks_Entity
+"//29",Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+"//30",Browser,"Creating Random Variable ",ClickOnRandomElement,%Contact%,//li//span[text()=';'],
+31,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+32,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+33,ddl_Channel,Highlight the element [<Object>],selectByVisibleText,Tasks:Channel,,Tasks_Entity
+34,Browser,Wait for [<Data>] milli seconds,pause,@1000,,
+35,ddl_TaskOutCome,"Click the [<Object>] ",selectByVisibleText,Tasks:TaskOutcome,,Tasks_Entity
+36,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+"//37",Browser,"Click on the Random Variable that is matching with the Xpath provided using JavaScript. ",ClickOnRandomElement,Tasks:TaskOutcome,"//label[text()='Task Outcome']/ancestor::div/following-sibling::div//select/option[contains(text(),';')]",
+38,Browser,Wait for [<Data>] milli seconds,pause,@1000,,
+"//39",txa_TaskCompletion_Comnts,Assert if [<Object>] is present,assertElementPresent,,,Tasks_Entity
+40,txa_TaskCompletion_Comnts,Enter the value [<Data>] in the Field [<Object>],Set,@This is Task completion comments,,Tasks_Entity
+41,Browser,Wait for [<Data>] milli seconds,pause,@1000,,

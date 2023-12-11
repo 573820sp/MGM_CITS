@@ -1,0 +1,9 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+1,list_ContactLookup_Record2,Assert if [<Object>] is present,waitForElementToBePresent,,,ContactLookup
+2,list_ContactLookup_Record2,Assert if [<Object>] is present,assertElementPresent,,,ContactLookup
+3,lbl_ContactName_Col,Assert if [<Object>] is present,assertElementPresent,,,ContactLookup
+4,lbl_MGM_Rewards_Col,Assert if [<Object>] is present,assertElementPresent,,,ContactLookup
+5,lbl_TierStatus_Col,Assert if [<Object>] is present,assertElementPresent,,,ContactLookup
+6,lbl_Email,Assert if [<Object>] is present,assertElementPresent,,,ContactLookup
+7,lbl_State,Assert if [<Object>] is present,assertElementPresent,,,ContactLookup
+8,btn_Arrow,Assert if [<Object>] is present,assertElementPresent,,,ContactLookup

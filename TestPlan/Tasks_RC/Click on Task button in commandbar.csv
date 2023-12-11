@@ -1,0 +1,5 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+"//1",btn_Task_CmndBar,And  User clicks on Task button in commandbar,highlight,,,Task_Entity
+"//2",btn_Task_CmndBar,"Click the [<Object>] ",Click,,,Task_Entity
+3,Browser,"Creating Random Variable ",MSCRM_SelectCommandbarOption,@Task,,
+4,Browser,Wait for [<Data>] milli seconds,pause,@3000,,

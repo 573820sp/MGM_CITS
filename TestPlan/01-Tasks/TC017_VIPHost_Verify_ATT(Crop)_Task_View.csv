@@ -1,0 +1,17 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+1,Execute,,Login_RC:Log in to MS Dynamics App with LEM User,,,
+2,Execute,,Login_RC:Select MGM Host Dynamics App from App List,,,
+3,Execute,,Tasks_RC:Click on Task Entity,,,
+4,Execute,,Tasks_RC:Click on Tasks View List,,,
+5,opt_MyTask_View,"Click the [<Object>] ",Click,,,Tasks_View
+6,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+7,Execute,,Tasks_RC:Verify the ATT column in Task view,,,
+8,Execute,,Tasks_RC:Click on Tasks View List,,,
+9,Option_My_smart_player_outreach,"Click the [<Object>] ",Click,,,Tasks_View
+10,Browser,Wait for [<Data>] milli seconds,pause,@12000,,
+11,btn_Edit_Coulmn_Filter,"Click the [<Object>] ",clickByJS,,,Contacts_View
+12,Browser,Wait for [<Data>] milli seconds,pause,@8000,,
+13,txt_ATT_after_clicking_filter_button,Assert if [<Object>] is present,assertElementPresent,,,Tasks_View
+14,txt_ATT_after_clicking_filter_button,Highlight the element [<Object>],highlight,,,Tasks_View
+15,btn_Cancel_Edit_Column,"Click the [<Object>] ",Click,,,Contacts_View
+16,Browser,Wait for [<Data>] milli seconds,pause,@2000,,

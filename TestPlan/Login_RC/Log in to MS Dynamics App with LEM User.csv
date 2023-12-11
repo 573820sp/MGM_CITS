@@ -1,0 +1,19 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+1,Browser,Open the Application Url,Open,Login:Url,,
+2,Browser,Wait for [<Data>] milli seconds,pause,@5000,,
+3,txt_Email,Enter the value [<Data>] in the Field [<Object>],Set,Login:UserEmail,,Login
+4,Browser,Wait for Page to be loaded,pause,@3000,,
+5,btn_Next,Click the [<Object>] button,Click,,,Login
+6,Browser,Wait for Page to be loaded,pause,@5000,,
+7,txt_Username,Enter the value [<Data>] in the Field [<Object>],Set,Login:UserId,,Login
+8,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+9,btn_Next,Click the [<Object>] button,Click,,,Login
+10,Browser,Wait for Page to be loaded,pause,@5000,,
+11,txt_Password,Enter the value [<Data>] in the Field [<Object>],Set,Login:Password,,Login
+12,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+13,btn_SignIn,"Click the [<Object>] ",Click,,,Login
+14,Browser,Wait for [<Data>] milli seconds,pause,@25000,,
+"//15",txt_SecurityQuestion,Enter the value [<Data>] in the Field [<Object>],Set,Login:SecretQ,,Login
+"//16",Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+"//17",btn_Verify,"Click the [<Object>] ",Click,,,Login
+"//18",Browser,Wait for [<Data>] milli seconds,pause,@40000,,

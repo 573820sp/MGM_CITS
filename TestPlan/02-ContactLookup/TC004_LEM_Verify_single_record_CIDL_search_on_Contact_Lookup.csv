@@ -1,0 +1,15 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+1,Execute,,Login_RC:Log in to MS Dynamics App with LEM User,,,
+2,Execute,,Login_RC:Select MGM LEM Dynamics App from App List,,,
+3,Execute,,ContactLookup_RC:Clicks on ContactLookup button on left side panel,,,
+4,Execute,,ContactLookup_RC:Search Mgm id in contact loopup  for contact record,,,
+5,hdr_Contact_Icon,Assert if [<Object>] is present,assertElementPresent,,,ContactLite_CIDL
+6,txt_MGM_ID,To Test the Accessibility of the Element using aXe,assertElementTextEquals,ContactLookup:RewardsSearch,,ContactLite_CIDL
+7,Execute,,ContactLookup_RC:Clicks on ContactLookup button on left side panel,,,
+8,Execute,,ContactLookup_RC:Search Email address in contact lookup,,,
+9,hdr_Contact_Icon,Assert if [<Object>] is present,assertElementPresent,,,ContactLite_CIDL
+10,txt_Email,Assert if [<Object>]'s Text Equals [<Data>],assertElementTextEquals,ContactLookup:EmailSearch,,ContactLite_CIDL
+11,Execute,,ContactLookup_RC:Clicks on ContactLookup button on left side panel,,,
+12,Execute,,ContactLookup_RC:Search Phone in contact lookup,,,
+13,hdr_Contact_Icon,Assert if [<Object>] is present,assertElementPresent,,,ContactLite_CIDL
+14,txt_HomePhone,Assert if [<Object>]'s Text Equals [<Data>],assertElementTextEquals,ContactLookup:PhoneSearch,,ContactLite_CIDL

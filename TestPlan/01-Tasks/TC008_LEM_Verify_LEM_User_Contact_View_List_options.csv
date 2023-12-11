@@ -1,0 +1,59 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+1,Execute,,Login_RC:Log in to MS Dynamics App with LEM User,,,
+2,Execute,,Login_RC:Select MGM LEM Dynamics App from App List,,,
+3,Execute,,Contacts_RC:Click on Contacts Entity,,,
+4,btn_Contact_ViewSelector,"Click the [<Object>] ",Click,,,Contacts_View
+5,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+6,opt_My_Contacts_View,Assert if [<Object>] is present,assertElementPresent,,,Contacts_View
+7,opt_Missing_Contact _Info_View,Assert if [<Object>] is present,assertElementPresent,,,Contacts_View
+8,opt_My_Hard_Code_Contacts_View,Assert if [<Object>] is present,assertElementPresent,,,Contacts_View
+9,opt_My_Soft_Code_Contacts_View,Assert if [<Object>] is present,assertElementPresent,,,Contacts_View
+10,opt_My_Contacts_View,"Click the [<Object>] ",Click,,,Contacts_View
+11,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+12,Execute,,Contacts_RC:Verifies all the columns in Contact viewlist,,,
+13,btn_EditFilter,"Click the [<Object>] ",Click,,,Tasks_View
+14,Browser,Wait for [<Data>] milli seconds,pause,@8000,,
+15,txt_Filter_StatusActiveHost,Assert if [<Object>] is present,waitForElementToBePresent,,30,Contacts_View
+16,Browser,Wait for [<Data>] milli seconds,pause,@5000,,
+17,txt_Filter_StatusActiveHost,Assert if [<Object>] is present,assertElementPresent,,,Contacts_View
+18,txt_Filter_HostCurrentUser,Assert if [<Object>] is present,assertElementPresent,,,Contacts_View
+19,btn_Cancel_Edit_Filter,"Click the [<Object>] ",Click,,,Tasks_View
+20,Browser,Wait for [<Data>] milli seconds,pause,@2000,,Contacts_View
+21,btn_Contact_ViewSelector,"Click the [<Object>] ",Click,,,Contacts_View
+22,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+23,opt_Missing_Contact _Info_View,"Click the [<Object>] ",Click,,,Contacts_View
+24,Browser,Wait for [<Data>] milli seconds,pause,@4000,,
+25,Execute,,Contacts_RC:Verifies all the columns in Contact viewlist,,,
+26,btn_EditFilter,"Click the [<Object>] ",Click,,,Tasks_View
+27,Browser,Wait for [<Data>] milli seconds,pause,@7000,,
+28,txt_ActiveStatus,Assert if [<Object>] is present,waitForElementToBePresent,,30,Contacts_View
+29,Browser,Wait for [<Data>] milli seconds,pause,@5000,,
+30,txt_ActiveStatus,Assert if [<Object>] is present,assertElementPresent,,,Contacts_View
+31,txt_Email_NoData,Assert if [<Object>] is present,assertElementPresent,,,Contacts_View
+32,txt_HomePhone_NoData,Assert if [<Object>] is present,assertElementPresent,,,Contacts_View
+33,txt_MobilePhone_NoData,Assert if [<Object>] is present,assertElementPresent,,,Contacts_View
+34,txt_Filter_HostCurrentUser,Assert if [<Object>] is present,assertElementPresent,,,Contacts_View
+35,btn_Cancel_Edit_Filter,"Click the [<Object>] ",Click,,,Tasks_View
+36,Browser,Wait for [<Data>] milli seconds,pause,@2000,,Contacts_View
+37,btn_Contact_ViewSelector,"Click the [<Object>] ",Click,,,Contacts_View
+38,Browser,Wait for [<Data>] milli seconds,pause,@4000,,
+39,opt_My_Hard_Code_Contacts_View,"Click the [<Object>] ",Click,,,Contacts_View
+40,Browser,Wait for [<Data>] milli seconds,pause,@12000,,
+41,Execute,,Contacts_RC:Verifies all the columns in Contact viewlist,,,
+42,btn_EditFilter,"Click the [<Object>] ",Click,,,Tasks_View
+43,Browser,Wait for [<Data>] milli seconds,pause,@12000,,
+44,txt_Filter_HostCurrentUser,Assert if [<Object>] is present,assertElementPresent,,,Contacts_View
+45,txt_Filter_StatusActiveHost,Assert if [<Object>] is present,assertElementPresent,,,Contacts_View
+46,txt_Type_Hardcode,Assert if [<Object>] is present,assertElementPresent,,,Contacts_View
+47,btn_Cancel_Edit_Filter,"Click the [<Object>] ",Click,,,Tasks_View
+48,Browser,Wait for [<Data>] milli seconds,pause,@2000,,Contacts_View
+49,btn_Contact_ViewSelector,"Click the [<Object>] ",Click,,,Contacts_View
+50,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+51,opt_My_Soft_Code_Contacts_View,"Click the [<Object>] ",Click,,,Contacts_View
+52,Browser,Wait for [<Data>] milli seconds,pause,@12000,,
+53,Execute,,Contacts_RC:Verifies all the columns in Contact viewlist,,,
+54,btn_EditFilter,"Click the [<Object>] ",Click,,,Tasks_View
+55,Browser,Wait for [<Data>] milli seconds,pause,@12000,,
+56,txt_Filter_HostCurrentUser,Assert if [<Object>] is present,assertElementPresent,,,Contacts_View
+57,txt_Type_Softcode,Assert if [<Object>] is present,assertElementPresent,,,Contacts_View
+58,txt_Filter_StatusActiveHost,Assert if [<Object>] is present,assertElementPresent,,,Contacts_View

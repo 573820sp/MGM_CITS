@@ -1,0 +1,19 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+1,txt_PlayerSelected,Assert if [<Object>]'s Text Contains [<Data>],waitForElementToBePresent,,40,CodingRequests_Entity
+2,txt_PlayerSelected,Assert if [<Object>]'s Text Contains [<Data>],assertElementTextContains,%ContactName%,,CodingRequests_Entity
+"//3",ddl_CodingtType_Selected_Opt,Set object [<Object>] property  as [<Data>] at runtime,setObjectProperty,ContactLookup:CodingType,"#codingtype",CodingRequests_Entity
+4,ddl_CodingChangeType,Assert if [<Object>] is present,assertElementPresent,,,CodingRequests_Entity
+"//5",txt_Property,Assert if [<Object>] is present,assertElementTextContains,ContactLookup:Property,,CodingRequests_Entity
+6,txt_MGMRewards,Assert if [<Object>] is present,assertElementTextIContains,%mgmid%,,CodingRequests_Entity
+7,ddl_RelationshipType,Assert if [<Object>] is present,assertElementTextIContains,ContactLookup:RelType,,CodingRequests_Entity
+"//8",txt_Manager,Assert if [<Object>] is present,assertElementTextIContains,,,CodingRequests_Entity
+9,btn_SaveAndClose,Assert if [<Object>] is present,Click,,,CodingRequests_Entity
+10,txt_ReqComntFieldErrorMsg,Assert if [<Object>]'s Text Contains [<Data>],assertElementTextContains,@Required fields must be filled in.,,CodingRequests_Entity
+11,Browser,Add a variable to access within testcase,AddVar,"=Date(0,ddMMyyhhmm):",%date%,
+12,Browser,"Creating Random Variable ",AddVar,@Coding Request_%date%,%ReqComments%,
+13,txt_RequestComment,Enter the value [<Data>] in the Field [<Object>],clearByJS,,,CodingRequests_Entity
+14,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+15,txt_RequestComment,Enter the value [<Data>] in the Field [<Object>],Set,%ReqComments%,,CodingRequests_Entity
+16,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+"//17",btn_SaveAndClose,Assert if [<Object>] is present,Click,,,CodingRequests_Entity
+"//18",Browser,Wait for [<Data>] milli seconds,pause,@5000,,

@@ -1,0 +1,13 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+1,Execute,,Login_RC:Log in to MS Dynamics App with LEM User,,,
+2,Execute,,Login_RC:Select MGM Admin Dynmics from app list,,,
+3,Execute,,General_RC:Global Search_Search for a record,,,
+4,tab_Reservation,"Click the [<Object>] ",Click,,,Contacts_Entity
+5,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+6,Reservation_Request_record_checkbox,"Click the [<Object>] ",clickByJS,,,Reservation_Request
+7,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+8,Clone_button,"Click the [<Object>] ",Click,,,Reservation_Request
+9,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+10,Execute,,Contacts_RC:Verify the Reservation Request creation page,,,
+11,Browser,"Select the option from MSCRM Commandbar. ",MSCRM_SelectCommandbarOption,@Save & Close,,
+12,Browser,Wait for [<Data>] milli seconds,pause,@3000,,

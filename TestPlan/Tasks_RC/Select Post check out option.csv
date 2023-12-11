@@ -1,0 +1,20 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+1,btn_Task_ViewSelector,"Click the [<Object>] ",Click,,,Tasks_View
+2,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+3,opt_PostCheckOut_View,"Click the [<Object>] ",Click,,,Tasks_View
+4,Browser,Wait for [<Data>] milli seconds,pause,@12000,,
+5,lbl_Subject_Col,Assert if [<Object>] is present,assertElementPresent,,,Tasks_View
+6,lbl_MGM_Rewards_Col,Assert if [<Object>] is present,assertElementPresent,,,Tasks_View
+7,lbl_Regarding_Col,Assert if [<Object>] is present,assertElementPresent,,,Tasks_View
+8,lbl_DueDate_Col,Assert if [<Object>] is present,assertElementPresent,,,Tasks_View
+9,lbl_CreatedOn_Col,Assert if [<Object>] is present,assertElementPresent,,,Tasks_View
+10,btn_EditFilter,"Click the [<Object>] ",Click,,,Tasks_View
+11,Browser,Wait for [<Data>] milli seconds,pause,@10000,,
+12,txt_FilterActiveStatus_Open,Assert if [<Object>] is present,waitForElementToBePresent,,20,Tasks_View
+13,txt_FilterActiveStatus_Open,Assert if [<Object>] is present,assertElementPresent,,,Tasks_View
+14,txt_FilterActiveStatus_Open,Highlight the element [<Object>],highlight,,,Tasks_View
+15,txt_FilterOwnerEqualsCurrentUser,Assert if [<Object>] is present,assertElementPresent,,,Tasks_View
+16,txt_FilterOwnerEqualsCurrentUser,Highlight the element [<Object>],highlight,,,Tasks_View
+17,txt_FilterSubject_Post Check out,Assert if [<Object>] is present,assertElementPresent,,,Tasks_View
+18,btn_Cancel_Edit_Filter,"Click the [<Object>] ",Click,,,Tasks_View
+19,Browser,Wait for [<Data>] milli seconds,pause,@2000,,

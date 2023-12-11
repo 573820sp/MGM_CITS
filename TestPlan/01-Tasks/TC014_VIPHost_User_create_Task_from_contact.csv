@@ -1,0 +1,26 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+1,Execute,,Login_RC:Log in to MS Dynamics App with LEM User,,,
+2,Execute,,Login_RC:Select MGM Host Dynamics App from App List,,,
+3,Execute,,General_RC:Global Search_Search for a record,,,
+4,Execute,,Contacts_RC:Select Task and Preference Tab,,,
+5,Execute,,Contacts_RC:Open Task creation page,,,
+6,Execute,,Contacts_RC:Create a Task from Contact,,,
+7,Execute,,Tasks_RC:Clicks on Save and Close button,,,
+8,tab_Summary,"Click the [<Object>] ",Click,,,Contacts_Entity
+9,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+10,Browser,"Refresh current page ",refreshDriver,,,
+11,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+12,Execute,,Contacts_RC:Select Task and Preference Tab,,,
+13,Execute,,Tasks_RC:Verify Close Acivity in task preference section,,,
+14,btn_Open_Record_Tp,"Click the [<Object>] ",Click,,,Contacts_Entity
+15,Browser,Wait for [<Data>] milli seconds,pause,@5000,,
+16,Execute,,Tasks_RC:Click on Mark Complete button in commandbar,,,
+"//17",Browser,"Refresh current page ",refreshDriver,,,
+"//18",Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+19,Execute,,Contacts_RC:Select Task and Preference Tab,,,
+20,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+21,hdr_TimelineRecord1,Assert if [<Object>]'s Text Contains [Ignorecase] [<Data>],assertElementTextIContains,%Subject%,,Contacts_Entity
+22,btn_Open_Record_Tp,"Click the [<Object>] ",Click,,,Contacts_Entity
+23,Browser,Wait for [<Data>] milli seconds,pause,@5000,,
+24,Browser,"Verify the Elemnet is present on the page for the Xpath provided. ",VerifyRandomElementIsPresent,%Subject%,//h1[text()=';'],
+25,Execute,,Tasks_RC:Delete record from commandbar,,,

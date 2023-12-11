@@ -1,0 +1,33 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+1,Execute,,Login_RC:Log in to MS Dynamics App with LEM User,,,
+2,Execute,,Login_RC:Select MGM LEM Dynamics App from App List,,,
+3,menu_Promos,Assert if [<Object>] is not present,assertElementNotPresent,,,AppList_Sitemap
+4,menu_ArrivalReport,Assert if [<Object>] is not present,assertElementNotPresent,,,AppList_Sitemap
+5,menu_MrktingSP,Assert if [<Object>] is not present,assertElementNotPresent,,,AppList_Sitemap
+6,menu_ProdDashboard,Assert if [<Object>] is not present,assertElementNotPresent,,,AppList_Sitemap
+7,Browser,Add a variable to access within testcase,AddVar,Contacts:ContactName,%SearchData%,
+8,Execute,,General_RC:Global Search_Search for a record,,,
+9,Browser,Wait for [<Data>] milli seconds,pause,@5000,,
+10,tab_Reservation,"Click the [<Object>] ",waitForElementToBeClickable,,30,Contacts_Entity
+11,tab_Reservation,"Click the [<Object>] ",Click,,,Contacts_Entity
+12,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+13,hdr_LimoReservations,Assert if [<Object>] is not present,assertElementNotPresent,,,Contacts_Entity
+14,hdr_ArrivalReservations,Assert if [<Object>] is not present,assertElementNotPresent,,,Contacts_Entity
+15,btn_NewDiningReservation,"Click the [<Object>] ",Click,,,Contacts_Entity
+16,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+17,Browser,switching to window by title [<Data>] is done,switchToWindowByTitleContains,@SEVENROOMS: Reservation & Guest Experience Platform · Login,,
+18,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+19,hdr_SevenRoomWelcome_Page,Assert if [<Object>] is present,assertElementPresent,,,Contacts_Entity
+20,hdr_SevenRoomWelcome_Page,Highlight the element [<Object>],highlight,,,Contacts_Entity
+21,Browser,Switching control to the default window,switchToWindowByTitleContains,@Contact: LEM Default Form,,
+22,tab_Summary,"Click the [<Object>] ",Click,,,Contacts_Entity
+23,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+24,tab_QuickPreferences,Assert if [<Object>] is not present,assertElementNotPresent,,,Contacts_Entity
+25,tab_Related,"Click the [<Object>] ",Click,,,Contacts_Entity
+26,Browser,Wait for [<Data>] milli seconds,pause,@5000,,
+"//27",lst_No_Data_Available,Assert if [<Object>] is present,assertElementPresent,,,Contacts_Entity
+28,Browser,"Creating Random Variable ",MSCRM_OpenSitemapSubArea,@RCX Member Care Portal,,
+29,Browser,Wait for [<Data>] milli seconds,pause,@12000,,
+30,Browser,switching to window by title [<Data>],switchToWindowByTitleContains,@rcx-mcp.prod.rcx-mgmprod2.lmvi.net,,
+31,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+32,Browser,Assert if Browser's Url Contains [<Data>],assertUrlContains,@https://rcx-mcp.prod.rcx-mgmprod2.lmvi.net/#/dashboard,,

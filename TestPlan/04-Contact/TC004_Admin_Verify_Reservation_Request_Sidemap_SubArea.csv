@@ -1,0 +1,16 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+1,Execute,,Login_RC:Log in to MS Dynamics App with LEM User,,,
+2,Execute,,Login_RC:Select MGM Admin Dynmics from app list,,,
+3,Browser,"Open the Entity from Sitemap Sub-area in MSCRM. ",MSCRM_OpenSitemapSubArea,@Reservation Requests,,
+4,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+5,Browser,"Select the option from MSCRM Commandbar. ",MSCRM_SelectCommandbarOption,@New,,
+6,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+"//7",tab_Reservation,"Click the [<Object>] ",Click,,,Contacts_Entity
+"//8",Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+"//9",NewReservation_Request_button,"Click the [<Object>] ",Click,,,Contacts_Entity
+10,Contact_textbox,Enter the value [<Data>] in the Field [<Object>],Set,CodingRequest:ContactName,,Reservation_Request
+11,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+12,Browser,"Click on the Random Variable that is matching with the Xpath provided using JavaScript. ",ClickByJsOnRandomElement,CodingRequest:ContactName,//span/span[text()=';'],
+13,Execute,,Contacts_RC:Verify the Reservation Request creation page,,,
+14,Browser,"Select the option from MSCRM Commandbar. ",MSCRM_SelectCommandbarOption,@Save & Close,,
+15,Browser,Wait for [<Data>] milli seconds,pause,@3000,,

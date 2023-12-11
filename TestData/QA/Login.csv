@@ -1,0 +1,6 @@
+Scenario,Flow,Iteration,SubIteration,UserEmail,UserId,Password,SecretQ,Url,AppName
+Login_RC,Log in to MS Dynamics App with LEM User,1,1,%LEM_User_Email%,%LEM_UserId%,%LEM_Password%,%LEM_SecQAnswer%,%URL_QA%,MGM LEM Dynamics
+Login_RC,Log in to MS Dynamics App with LEM Admin User,1,1,%LEM_Adm_User_Email%,%LEM_Adm_UserId%,%LEM_Adm_Password%,%LEM_Adm_SecQAnswer%,%URL_QA%,MGM LEM Dynamics
+Login_RC,Log in to MS Dynamics App with Host User,1,1,%HOST_User_Email%,%HOST_UserId%,%HOST_Password%,%HOST_SecQAnswer%,%URL_QA%,MGM Host Dynamics
+Login_RC,Log in to MS Dynamics App Manager User,1,1,%Mngr_User_Email%,%Mngr_UserId%,%Mngr_Password%,%Mngr_SecQAnswer%,%URL_QA%,MGM Admin Dynamics
+Login_RC,Log in to MS Dynamics App Manager User,2,1,%Mngr_User_Email%,%Mngr_UserId%,%Mngr_Password%,%Mngr_SecQAnswer%,%URL_QA%,MGM Admin Dynamics

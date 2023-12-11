@@ -1,0 +1,6 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+1,tile_MGM_Host_Dynamics,Highlight the element [<Object>],waitForElementToBePresent,,70,AppList_Sitemap
+2,tile_MGM_Host_Dynamics,"Click the [<Object>] ",clickByJS,,,AppList_Sitemap
+3,Browser,Wait for [<Data>] milli seconds,pause,@20000,,
+4,lnk_Host_App,Wait  for the element [<Object>] to be present,waitForElementToBePresent,,40,AppList_Sitemap
+"//5",Browser,Open the Url [<Data>] in the Browser,Open,@https://mgmhosttest.crm.dynamics.com/,,

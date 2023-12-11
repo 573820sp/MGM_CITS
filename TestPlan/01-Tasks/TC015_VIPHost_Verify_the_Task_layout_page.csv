@@ -1,0 +1,44 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+1,Execute,,Login_RC:Log in to MS Dynamics App with LEM User,,,
+2,Execute,,Login_RC:Select MGM Host Dynamics App from App List,,,
+3,Execute,,Tasks_RC:Open an existing compled Task,,,
+4,txt_Readonly_Task,Assert if [<Object>] is present,assertElementPresent,,,Tasks_Entity
+5,txt_Readonly_Task,Highlight the element [<Object>],highlight,,,Tasks_Entity
+"//6",Browser,"Verify the Element is present on the page for the Xpath provided. ",VerifyRandomElementIsPresent,%Subject%,//h1[@title=';'],
+"//7",Browser,"Verify the Element is present on the page for the Xpath provided. ",VerifyRandomElementIsPresent,%Subject%,"//h1[text()=';']/span[contains(text(),'Save')]",
+8,Icon_Task,Assert if [<Object>] is present,assertElementPresent,,,Tasks_Entity
+"//9",txt_MGM_UCI_TaskDefault,Assert if [<Object>] is present,assertElementPresent,,,Tasks_Entity
+10,txt_TaskOwner,Assert if [<Object>] is present,assertElementPresent,,,Tasks_Entity
+11,txt_TaskOwner,Assert if [<Object>]'s Text Equals [<Data>],assertElementTextEquals,Tasks:ReassignTo,,Tasks_Entity
+12,txt_Priority_Normal,Assert if [<Object>] is present,assertElementPresent,,,Tasks_Entity
+13,txt_Priority_Normal,Assert if [<Object>] is present,assertElementPresent,,,Tasks_Entity
+14,txt_due_value,Assert if [<Object>] is present,assertElementPresent,,,Tasks_Entity
+15,txt_Task_Details,Assert if [<Object>] is present,assertElementPresent,,,Tasks_Entity
+16,txt_TaskSubject,Assert if [<Object>] is present,assertElementPresent,,,Tasks_Entity
+17,Browser,Assert if [<Object>]'s Text Equals [Ignorecase] [<Data>],VerifyRandomElementIsPresent,%Subject%,//label[text()='Subject']/ancestor::div/following-sibling::div//input[@value=';'],
+18,txt_TaskDescription,Assert if [<Object>] is present,assertElementPresent,,,Tasks_Entity
+19,txt_TaskDescription,Assert if [<Object>]'s Text Contains [<Data>],assertElementTextContains,Tasks:Description,,Tasks_Entity
+20,txt_SelectedRegarding,Assert if [<Object>] is present,assertElementPresent,,,Tasks_Entity
+21,txt_SelectedRegarding,Assert if [<Object>]'s Text Contains [<Data>],assertElementTextContains,Tasks:Regarding,,Tasks_Entity
+22,txt_property_taskInformation,Assert if [<Object>] is present,assertElementPresent,,,Tasks_Entity
+23,txt_Task_Complition_details,Assert if [<Object>] is present,assertElementPresent,,,Tasks_Entity
+24,ddl_TaskOutCome,Assert if [<Object>] is present,assertElementPresent,,,Tasks_Entity
+25,ddl_TaskOutCome,Assert if [<Object>]'s Text Equals [Ignorecase] [<Data>],assertElementTextIEquals,Tasks:TaskOutcome,,Tasks_Entity
+26,txa_TaskCompletion_Comnts,Assert if [<Object>] is present,assertElementPresent,,,Tasks_Entity
+27,txa_TaskCompletion_Comnts,Assert if [<Object>] is present,assertElementTextEquals,Tasks:Comments,,Tasks_Entity
+28,dtp_FollowUp_Date,Assert if [<Object>] is present,assertElementPresent,,,Tasks_Entity
+29,dtp_FollowUp_Date,Assert if [<Object>] is present,assertElementTextIEquals,Tasks:Followup,,Tasks_Entity
+30,opt_Substatus_Completed,And  User validates Substatus value is Completed,assertElementPresent,,,Tasks_Entity
+31,Browser,"Verify the Element is present on the page for the Xpath provided. ",VerifyRandomElementIsPresent,ContactLookup:TierStatus,//label[text()='Tier Status']/../../../following-sibling::div//select[@title=';'],
+32,Browser,"Verify the Element is present on the page for the Xpath provided. ",VerifyRandomElementIsPresent,ContactLookup:Rewards#,//label[text()='MGM Rewards #']/../../../following-sibling::div//input[@title=';'],
+33,txt_First_Name_ContactInformation,Assert if [<Object>] is present,assertElementPresent,,,Tasks_Entity
+34,txt_Last_Name_ContactInformation,Assert if [<Object>] is present,assertElementPresent,,,Tasks_Entity
+"//35",Browser,"Verify the Element is present on the page for the Xpath provided. ",VerifyRandomElementIsPresent,ContactLookup:BirthDate,//label[text()='Birthday']/ancestor::div/following-sibling::div//input[@value=';'],
+36,txt_Birthday,Assert if [<Object>] is present,assertElementPresent,,,Contacts_Entity
+37,txt_Homephone,Assert if [<Object>] is present,assertElementPresent,,,Contacts_Entity
+38,Browser,"Verify the Element is present on the page for the Xpath provided. ",VerifyRandomElementIsPresent,ContactLookup:HomePhone,//label[text()='Home Phone']/ancestor::div/following-sibling::div//input[@value=';'],
+39,Browser,"Verify the Element is present on the page for the Xpath provided. ",VerifyRandomElementIsPresent,ContactLookup:MobilePhone,//label[text()='Mobile Phone']/ancestor::div/following-sibling::div//input[@value=';'],
+40,Browser,"Verify the Element is present on the page for the Xpath provided. ",VerifyRandomElementIsPresent,ContactLookup:Email,//label[text()='Email']/ancestor::div/following-sibling::div//input[@value=';'],
+41,txt_City,Assert if [<Object>] is present,assertElementPresent,,,Contacts_Entity
+42,txt_State,Assert if [<Object>] is present,assertElementPresent,,,Contacts_Entity
+43,Browser,"Verify the Element is present on the page for the Xpath provided. ",VerifyRandomElementIsPresent,ContactLookup:CityStateZip,//label[text()='Address 1: ZIP/Postal Code']/ancestor::div/following-sibling::div//input[@value=';'],

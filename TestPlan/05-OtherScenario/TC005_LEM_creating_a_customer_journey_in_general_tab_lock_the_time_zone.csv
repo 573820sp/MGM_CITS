@@ -1,0 +1,46 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+1,Execute,,Login_RC:Log in to MS Dynamics App with LEM User,,,
+2,Execute,,Login_RC:Select MGM LEM Dynamics App from App List,,,
+3,Browser,"Open the Entity from Sitemap Sub-area in MSCRM. ",MSCRM_OpenSitemapSubArea,@Segments,,
+4,Browser,Wait for [<Data>] milli seconds,pause,@17000,,
+5,Browser,"Select the option from MSCRM Commandbar. ",MSCRM_SelectCommandbarOption,@New,,
+6,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+7,Command_New_Dynamic_segment,Highlight the element [<Object>],highlight,,,Marketing_view
+8,Command_New_Dynamic_segment,Assert if [<Object>] is present,assertElementPresent,,,Marketing_view
+9,Command_New_Static_segment,Highlight the element [<Object>],highlight,,,Marketing_view
+10,Command_New_Static_segment,Assert if [<Object>] is present,assertElementPresent,,,Marketing_view
+11,Command_New_Dynamic_segment,"Click the [<Object>] ",Click,,,Marketing_view
+12,Browser,Wait for [<Data>] milli seconds,pause,@9000,,
+13,Select_button,"Click the [<Object>] ",Click,,,Marketing_view
+14,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+15,Browser,"Creating Random Variable ",RandomVariableCreation,@Test_,%Segment%,
+16,Name_textbox,"Click the [<Object>] ",Click,,,Marketing_view
+17,Name_textbox,Clear text [<Data>] from object [<Object>].,clear,,,Marketing_view
+18,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+19,Name_textbox,Enter the value [<Data>] in the Field [<Object>],Set,%Segment%,,Marketing_view
+20,btn_AttributeSelector,"Click the [<Object>] ",Click,,,Marketing_view
+21,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+22,Attribute_textbox,"Search and select value from LookUp field ",Set,@Owner,,Marketing_view
+23,Select_owner_lookup,"Click the [<Object>] ",Click,,,Marketing_view
+24,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+25,lookup_owner,"Click the [<Object>] ",Click,,,Marketing_view
+26,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+27,lookup_owner,Enter the value [<Data>] in the Field [<Object>],Set,Task_view:Owner,,Marketing_view
+28,Browser,Wait for [<Data>] milli seconds,pause,@8000,,
+29,Advance_lookup,"Click the [<Object>] ",Click,,,Marketing_view
+30,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+31,Browser,"Click on the Random Variable that is matching with the Xpath provided using JavaScript. ",ClickOnRandomElement,Task_view:Owner,//span/span[text()=';'],
+32,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+33,Browser,"Select the option from MSCRM Commandbar. ",MSCRM_SelectCommandbarOption,@Save,,
+34,Browser,Wait for [<Data>] milli seconds,pause,@8000,,
+35,Browser,"Select the option from MSCRM Commandbar. ",MSCRM_SelectCommandbarOption,@Publish,,
+36,Yes_button,"Click the [<Object>] ",Click,,,Marketing_view
+37,Browser,Wait for [<Data>] milli seconds,pause,@9000,,
+38,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+39,General_tab,"Click the [<Object>] ",Click,,,Marketing_view
+40,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+41,Browser,"Verify the Element is present on the page for the Xpath provided. ",VerifyRandomElementIsPresent,%Segment%,//label[text()='Name']/../../../following-sibling::div//input[@title=';'],
+42,val_TimeZone,Highlight the element [<Object>],highlight,,,Marketing_view
+43,val_TimeZone,Assert if [<Object>] is present,assertElementPresent,,,Marketing_view
+44,Browser,"Refresh current page ",MSCRM_SelectCommandbarOption,@Save,,Marketing_view
+45,Browser,Wait for [<Data>] milli seconds,pause,@2000,,

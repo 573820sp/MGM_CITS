@@ -1,0 +1,5 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+1,txt_TaskDescription,And  User fills Description Testbox in the Task creation page,Click,,,Tasks_Entity
+2,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+3,txt_TaskDescription,And  User fills Description Testbox in the Task creation page,clear,,,Tasks_Entity
+4,txt_TaskDescription,Enter the value [<Data>] in the Field [<Object>],Set,@This task is creating as part of Test Automation. Please Ignore.,,Tasks_Entity

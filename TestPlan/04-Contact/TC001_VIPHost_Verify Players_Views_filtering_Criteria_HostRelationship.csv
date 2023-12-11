@@ -1,0 +1,45 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+1,Execute,,Login_RC:Log in to MS Dynamics App with LEM User,,,
+2,Execute,,Login_RC:Select MGM Host Dynamics App from App List,,,
+3,Browser,"Open the Entity from Sitemap Sub-area in MSCRM. ",MSCRM_OpenSitemapSubArea,@Players,,
+4,Browser,Wait for [<Data>] milli seconds,pause,@10000,,
+5,btn_Contact_ViewSelector,"Click the [<Object>] ",Click,,,Contacts_View
+6,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+7,opt_My_Contacts_View,"Click the [<Object>] ",Click,,,Contacts_View
+8,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+9,Execute,,Contacts_RC:Verify Host relationship is Active,,,
+10,btn_Contact_ViewSelector,"Click the [<Object>] ",Click,,,Contacts_View
+11,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+12,opt_players_missing_contact_info_view,"Click the [<Object>] ",Click,,,Contacts_View
+13,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+14,Execute,,Contacts_RC:Verify Host relationship is Active,,,
+15,btn_Contact_ViewSelector,"Click the [<Object>] ",Click,,,Contacts_View
+16,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+17,opt_My_Hard_code_players,"Click the [<Object>] ",Click,,,Contacts_View
+18,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+19,Execute,,Contacts_RC:Verify Host relationship is Active,,,
+20,btn_Contact_ViewSelector,"Click the [<Object>] ",Click,,,Contacts_View
+21,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+22,opt_my_soft_code_players,"Click the [<Object>] ",Click,,,Contacts_View
+23,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+24,Execute,,Contacts_RC:Verify Host relationship is Active,,,
+25,btn_Contact_ViewSelector,"Click the [<Object>] ",Click,,,Contacts_View
+26,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+27,opt_My BetMGM_Contacts_view,"Click the [<Object>] ",Click,,,Contacts_View
+28,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+29,Execute,,Contacts_RC:Verify Host relationship is Active,,,
+30,btn_Contact_ViewSelector,"Click the [<Object>] ",Click,,,Contacts_View
+31,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+32,opt_My_Players_Slot_Tournaments_view,"Click the [<Object>] ",Click,,,Contacts_View
+33,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+34,Execute,,Contacts_RC:Verify Host relationship is Active,,,
+35,btn_Contact_ViewSelector,"Click the [<Object>] ",Click,,,Contacts_View
+36,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+37,opt__My Players _Sporting_Events_view,"Click the [<Object>] ",Click,,,Contacts_View
+38,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+39,Execute,,Contacts_RC:Verify Host relationship is Active,,,
+40,btn_Contact_ViewSelector,"Click the [<Object>] ",Click,,,Contacts_View
+41,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+42,opt_My Players_Table_Events_view,"Click the [<Object>] ",Click,,,Contacts_View
+43,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+44,Execute,,Contacts_RC:Verify Host relationship is Active,,,

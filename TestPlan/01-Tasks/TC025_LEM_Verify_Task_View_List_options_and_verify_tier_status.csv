@@ -1,0 +1,50 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+1,Execute,,Login_RC:Log in to MS Dynamics App with LEM User,,,
+2,Execute,,Login_RC:Select MGM LEM Dynamics App from App List,,,
+3,Execute,,Tasks_RC:Click on Task Entity,,,
+4,Execute,,Tasks_RC:Click on Tasks View List,,,
+5,Execute,,Tasks_RC:Verifies Task View list dropdown options,,,
+6,App,Perform page down [<Data>]  times,pageDown,@14,,
+"//7",My_Tasks_Due_in_Next_7_Days,Assert if [<Object>] is present,assertElementPresent,,,Tasks_View
+"//8",My_Upcoming_Arrivals_Next 7_Days,Assert if [<Object>] is present,assertElementPresent,,,Tasks_View
+"//9",System_Generated_Tasks,Assert if [<Object>] is present,assertElementPresent,,,Tasks_View
+10,btn_Task_ViewSelector,"Click the [<Object>] ",clickByJS,,,Tasks_View
+11,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+"//12",opt_MyTask_View,Assert if [<Object>] is present,Click,,,Tasks_View
+13,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+14,Execute,,Tasks_RC:Verify tier status column,,,
+15,btn_Task_ViewSelector,"Click the [<Object>] ",clickByJS,,,Tasks_View
+16,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+17,opt_NBA_View,Assert if [<Object>] is present,Click,,,Tasks_View
+18,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+19,Execute,,Tasks_RC:Verify tier status column,,,
+20,btn_Task_ViewSelector,"Click the [<Object>] ",clickByJS,,,Tasks_View
+21,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+22,opt_PreArrival_View,Assert if [<Object>] is present,clickByJS,,,Tasks_View
+23,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+24,Execute,,Tasks_RC:Verify tier status column,,,
+25,btn_Task_ViewSelector,"Click the [<Object>] ",clickByJS,,,Tasks_View
+26,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+27,opt_PastDue_View,Assert if [<Object>] is present,clickByJS,,,Tasks_View
+28,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+29,Execute,,Tasks_RC:Verify tier status column,,,
+30,btn_Task_ViewSelector,"Click the [<Object>] ",clickByJS,,,Tasks_View
+31,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+32,opt_OutboundOutreach_View,Assert if [<Object>] is present,clickByJS,,,Tasks_View
+33,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+34,Execute,,Tasks_RC:Verify tier status column,,,
+35,btn_Task_ViewSelector,"Click the [<Object>] ",clickByJS,,,Tasks_View
+36,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+37,opt_PostCheckOut_View,Assert if [<Object>] is present,clickByJS,,,Tasks_View
+38,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+39,Execute,,Tasks_RC:Verify tier status column,,,
+40,btn_Task_ViewSelector,"Click the [<Object>] ",clickByJS,,,Tasks_View
+41,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+42,opt_CompletedTask_View,Assert if [<Object>] is present,clickByJS,,,Tasks_View
+43,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+44,Execute,,Tasks_RC:Verify tier status column,,,
+45,btn_Task_ViewSelector,"Click the [<Object>] ",clickByJS,,,Tasks_View
+46,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+47,opt_MyFollowUpTask_View,Assert if [<Object>] is present,clickByJS,,,Tasks_View
+48,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+49,Execute,,Tasks_RC:Verify tier status column,,,

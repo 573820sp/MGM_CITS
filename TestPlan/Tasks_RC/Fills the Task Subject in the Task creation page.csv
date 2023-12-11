@@ -1,0 +1,10 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+1,txt_TaskSubject,And  User fills the Subject textbox in the Task creation page,highlight,,,Tasks_Entity
+2,txt_TaskSubject,And  User fills the Subject textbox in the Task creation page,Click,,,Tasks_Entity
+3,Browser,Wait for [<Data>] milli seconds,pause,@4000,,
+4,txt_TaskSubject,And  User fills the Subject textbox in the Task creation page,clear,,,Tasks_Entity
+5,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+"//6",Browser,Add a variable to access within testcase,AddVar,"=Date(0,ddMMyyhhmm):",%date%,
+7,Browser,"Creating Random Variable ",RandomVariableCreation,@Task_,%Subject%,
+8,txt_TaskSubject,Enter the value [<Data>] in the Field [<Object>],Set,%Subject%,,Tasks_Entity
+9,Browser,Wait for [<Data>] milli seconds,pause,@3000,,

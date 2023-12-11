@@ -1,0 +1,4 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+1,hdr_Confirm AppOfWorkflow_Popup,Assert if [<Object>] is present,assertElementPresent,,,Tasks_View
+2,btn_Ok,"Click the [<Object>] ",Click,,,Tasks_View
+3,Browser,Wait for [<Data>] milli seconds,pause,@3000,,

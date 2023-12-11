@@ -1,0 +1,32 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+1,lbl_MGM_Rewards,Assert if [<Object>] is present,assertElementPresent,,,CodingRequests_Entity
+2,ddl_CodingRequestType_Uncode_Selected,Assert if [<Object>] is present,assertElementPresent,,,CodingRequests_Entity
+3,lbl_CodingChangeType,Assert if [<Object>] is present,assertElementPresent,,,CodingRequests_Entity
+4,ddl_CodingChangeType,Assert if [<Object>] is present,assertElementPresent,,,CodingRequests_Entity
+5,ddl_CodingChangeType,"Click the [<Object>] ",Click,,,CodingRequests_Entity
+6,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+7,opt_CodingRequestType_Option4,Assert if [<Object>] is present,assertElementPresent,,,CodingRequests_Entity
+8,opt_CodingRequestType_Option5,Assert if [<Object>] is not present,assertElementNotPresent,,,CodingRequests_Entity
+9,opt_ReqSoftCode,Assert if [<Object>] is present,assertElementPresent,,,CodingRequests_Entity
+10,opt_ReqHardCode,Assert if [<Object>] is present,assertElementPresent,,,CodingRequests_Entity
+11,opt_Uncode,Assert if [<Object>] is present,assertElementPresent,,,CodingRequests_Entity
+12,opt_Reassign,Assert if [<Object>] is present,assertElementPresent,,,CodingRequests_Entity
+13,opt_Uncode,"Click the [<Object>] ",Click,,,CodingRequests_Entity
+14,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+15,lbl_Property,Assert if [<Object>] is present,assertElementPresent,,,CodingRequests_Entity
+16,txt_Property,Assert if [<Object>] is present,assertElementPresent,,,CodingRequests_Entity
+17,Browser,"Creating Random Variable ",VerifyRandomElementIsPresent,%Contact%,//label[text()='Player']/ancestor::div[2]/following-sibling::div//div[text()=';'],
+18,lbl_Player,Assert if [<Object>] is present,assertElementPresent,,,CodingRequests_Entity
+19,txt_MGMRewards,Assert if [<Object>] is present,assertElementPresent,,,CodingRequests_Entity
+20,ddl_RelationshipType,Assert if [<Object>] is present,assertElementPresent,,,CodingRequests_Entity
+21,ddl_RelationshipType,"Click the [<Object>] ",Click,,,CodingRequests_Entity
+22,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+23,opt_Relationtype_Option2,Assert if [<Object>] is present,assertElementPresent,,,CodingRequests_Entity
+24,opt_Relationtype_Option3,Assert if [<Object>] is not present,assertElementNotPresent,,,CodingRequests_Entity
+25,opt_SoftCode,Assert if [<Object>] is present,assertElementPresent,,,CodingRequests_Entity
+26,opt_HardCode,Assert if [<Object>] is present,assertElementPresent,,,CodingRequests_Entity
+27,opt_SoftCode,"Click the [<Object>] ",Click,,,CodingRequests_Entity
+28,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+29,lbl_Manager,Assert if [<Object>] is present,assertElementPresent,,,CodingRequests_Entity
+30,txt_Manager,Assert if [<Object>] is present,assertElementPresent,,,CodingRequests_Entity
+31,btn_Cancel,Assert if [<Object>] is present,assertElementPresent,,,CodingRequests_Entity

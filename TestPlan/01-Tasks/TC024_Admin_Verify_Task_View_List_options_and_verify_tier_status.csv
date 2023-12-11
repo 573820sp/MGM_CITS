@@ -1,0 +1,181 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+1,Execute,,Login_RC:Log in to MS Dynamics App with LEM User,,,
+2,Execute,,Login_RC:Select MGM Admin Dynmics from app list,,,
+3,Execute,,Tasks_RC:Click on Task Entity,,,
+4,Execute,,Tasks_RC:Click on Tasks View List,,,
+5,opt_MyTask_View,Assert if [<Object>] is present,assertElementPresent,,,Tasks_View
+6,My_Task_view,Assert if [<Object>] is present,assertElementPresent,,,Tasks_View
+7,Option_My_smart_player_outreach,Assert if [<Object>] is present,assertElementPresent,,,Tasks_View
+8,opt_1b._My_Cross-Regional_Tasks,Assert if [<Object>] is present,assertElementPresent,,,Tasks_View
+9,opt_2a._My_New_Leads,Assert if [<Object>] is present,assertElementPresent,,,Tasks_View
+10,opt_2b._My_BetMGM_Tasks,Assert if [<Object>] is present,assertElementPresent,,,Tasks_View
+11,opt_My_Follow_Up_Tasks,Assert if [<Object>] is present,assertElementPresent,,,Tasks_View
+12,opt_4._My_JSX_Tasks,Assert if [<Object>] is present,assertElementPresent,,,Tasks_View
+13,opt_5.My_Aviation_Tasks,Assert if [<Object>] is present,assertElementPresent,,,Tasks_View
+14,opt_6.My_Las_Vegas_Events_Tasks,Assert if [<Object>] is present,assertElementPresent,,,Tasks_View
+15,opt_7a.My_Soft_Code_Tasks,Assert if [<Object>] is present,assertElementPresent,,,Tasks_View
+16,opt_7b.My_Hard_Code_Tasks,Assert if [<Object>] is present,assertElementPresent,,,Tasks_View
+17,opt_9a.Sweeps,Assert if [<Object>] is present,assertElementPresent,,,Tasks_View
+18,opt_9b_keeps,Assert if [<Object>] is present,assertElementPresent,,,Tasks_View
+19,opt_My_Contacts_This_Quarter,Assert if [<Object>] is present,assertElementPresent,,,Tasks_View
+20,opt_My_Contacts_Today,Assert if [<Object>] is present,assertElementPresent,,,Tasks_View
+21,opt_My_Upcoming_Arrivals-Next7_Days,Assert if [<Object>] is present,assertElementPresent,,,Tasks_View
+22,opt_CompletedTask_View,Assert if [<Object>] is present,assertElementPresent,,,Tasks_View
+23,option_My_contact_this_month,Assert if [<Object>] is present,assertElementPresent,,,Tasks_View
+24,opt_2b._My_BetMGM_Tasks,Assert if [<Object>] is present,assertElementPresent,,,Tasks_View
+25,Integration_Created in_Past_24_Hours',Assert if [<Object>] is present,assertElementPresent,,,Tasks_View
+26,Integration_Created_in_Past_48_Hours,Assert if [<Object>] is present,assertElementPresent,,,Tasks_View
+27,option_My_contact_this_month,Assert if [<Object>] is present,assertElementPresent,,,Tasks_View
+28,opt_My_Contacts_This_Quarter,Assert if [<Object>] is present,assertElementPresent,,,Tasks_View
+29,opt_My_Contacts_Today,Assert if [<Object>] is present,assertElementPresent,,,Tasks_View
+30,My_Open_Cross_Property_Tasks_view,Assert if [<Object>] is present,assertElementPresent,,,Tasks_View
+31,App,Perform page down [<Data>]  times,pageDown,@14,,
+32,My_Tasks_Due_in_Next_7_Days,Assert if [<Object>] is present,assertElementPresent,,,Tasks_View
+33,opt_My_Upcoming_Arrivals-Next7_Days,Assert if [<Object>] is present,assertElementPresent,,,Tasks_View
+34,System_Generated_Tasks,Assert if [<Object>] is present,assertElementPresent,,,Tasks_View
+35,btn_Task_ViewSelector,"Click the [<Object>] ",clickByJS,,,Tasks_View
+36,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+"//37",opt_MyTask_View,Assert if [<Object>] is present,Click,,,Tasks_View
+38,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+39,Execute,,Tasks_RC:Verify tier status column,,,
+40,btn_Task_ViewSelector,"Click the [<Object>] ",clickByJS,,,Tasks_View
+41,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+42,Option_My_smart_player_outreach,Assert if [<Object>] is present,clickByJS,,,Tasks_View
+43,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+44,Execute,,Tasks_RC:Verify tier status column,,,
+45,btn_Task_ViewSelector,"Click the [<Object>] ",clickByJS,,,Tasks_View
+46,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+47,opt_1b._My_Cross-Regional_Tasks,Assert if [<Object>] is present,clickByJS,,,Tasks_View
+48,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+49,Execute,,Tasks_RC:Verify tier status column,,,
+50,btn_Task_ViewSelector,"Click the [<Object>] ",clickByJS,,,Tasks_View
+51,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+52,opt_2a._My_New_Leads,Assert if [<Object>] is present,clickByJS,,,Tasks_View
+53,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+54,Execute,,Tasks_RC:Verify tier status column,,,
+55,btn_Task_ViewSelector,"Click the [<Object>] ",clickByJS,,,Tasks_View
+56,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+57,opt_2b._My_BetMGM_Tasks,Assert if [<Object>] is present,clickByJS,,,Tasks_View
+58,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+59,Execute,,Tasks_RC:Verify tier status column,,,
+60,btn_Task_ViewSelector,"Click the [<Object>] ",clickByJS,,,Tasks_View
+61,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+62,My_Task_view,Assert if [<Object>] is present,clickByJS,,,Tasks_View
+63,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+64,Execute,,Tasks_RC:Verify tier status column,,,
+65,btn_Task_ViewSelector,"Click the [<Object>] ",clickByJS,,,Tasks_View
+66,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+67,opt_4._My_JSX_Tasks,Assert if [<Object>] is present,clickByJS,,,Tasks_View
+68,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+69,Execute,,Tasks_RC:Verify tier status column,,,
+70,btn_Task_ViewSelector,"Click the [<Object>] ",clickByJS,,,Tasks_View
+71,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+72,opt_5.My_Aviation_Tasks,Assert if [<Object>] is present,clickByJS,,,Tasks_View
+73,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+74,Execute,,Tasks_RC:Verify tier status column,,,
+75,btn_Task_ViewSelector,"Click the [<Object>] ",clickByJS,,,Tasks_View
+76,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+77,opt_6.My_Las_Vegas_Events_Tasks,Assert if [<Object>] is present,clickByJS,,,Tasks_View
+78,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+79,Execute,,Tasks_RC:Verify tier status column,,,
+80,btn_Task_ViewSelector,"Click the [<Object>] ",clickByJS,,,Tasks_View
+81,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+82,opt_7a.My_Soft_Code_Tasks,Assert if [<Object>] is present,clickByJS,,,Tasks_View
+83,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+84,Execute,,Tasks_RC:Verify tier status column,,,
+85,btn_Task_ViewSelector,"Click the [<Object>] ",clickByJS,,,Tasks_View
+86,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+87,opt_7b.My_Hard_Code_Tasks,Assert if [<Object>] is present,clickByJS,,,Tasks_View
+88,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+89,Execute,,Tasks_RC:Verify tier status column,,,
+90,btn_Task_ViewSelector,"Click the [<Object>] ",clickByJS,,,Tasks_View
+91,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+92,opt_9a.Sweeps,Assert if [<Object>] is present,clickByJS,,,Tasks_View
+93,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+94,Execute,,Tasks_RC:Verify tier status column,,,
+95,btn_Task_ViewSelector,"Click the [<Object>] ",clickByJS,,,Tasks_View
+96,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+97,opt_9b_keeps,Assert if [<Object>] is present,clickByJS,,,Tasks_View
+98,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+99,Execute,,Tasks_RC:Verify tier status column,,,
+100,btn_Task_ViewSelector,"Click the [<Object>] ",clickByJS,,,Tasks_View
+101,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+102,opt_My_Contacts_This_Quarter,Assert if [<Object>] is present,clickByJS,,,Tasks_View
+103,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+104,Execute,,Tasks_RC:Verify tier status column,,,
+105,btn_Task_ViewSelector,"Click the [<Object>] ",clickByJS,,,Tasks_View
+106,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+107,opt_My_Contacts_Today,Assert if [<Object>] is present,clickByJS,,,Tasks_View
+108,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+109,Execute,,Tasks_RC:Verify tier status column,,,
+110,btn_Task_ViewSelector,"Click the [<Object>] ",clickByJS,,,Tasks_View
+111,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+112,App,Perform page down [<Data>]  times,pageDown,@3,,
+113,opt_My_Upcoming_Arrivals-Next7_Days,Assert if [<Object>] is present,clickByJS,,,Tasks_View
+114,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+115,Execute,,Tasks_RC:Verify tier status column,,,
+116,btn_Task_ViewSelector,"Click the [<Object>] ",clickByJS,,,Tasks_View
+117,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+118,opt_CompletedTask_View,Assert if [<Object>] is present,clickByJS,,,Tasks_View
+119,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+120,Execute,,Tasks_RC:Verify tier status column,,,
+121,btn_Task_ViewSelector,"Click the [<Object>] ",clickByJS,,,Tasks_View
+122,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+123,option_My_contact_this_month,Assert if [<Object>] is present,clickByJS,,,Tasks_View
+124,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+125,Execute,,Tasks_RC:Verify tier status column,,,
+126,btn_Task_ViewSelector,"Click the [<Object>] ",clickByJS,,,Tasks_View
+127,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+128,opt_2b._My_BetMGM_Tasks,Assert if [<Object>] is present,clickByJS,,,Tasks_View
+129,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+130,Execute,,Tasks_RC:Verify tier status column,,,
+131,btn_Task_ViewSelector,"Click the [<Object>] ",clickByJS,,,Tasks_View
+132,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+133,My_Task_view,Assert if [<Object>] is present,clickByJS,,,Tasks_View
+134,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+135,Execute,,Tasks_RC:Verify tier status column,,,
+136,btn_Task_ViewSelector,"Click the [<Object>] ",clickByJS,,,Tasks_View
+137,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+138,Integration_Created in_Past_24_Hours',Assert if [<Object>] is present,clickByJS,,,Tasks_View
+139,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+140,Execute,,Tasks_RC:Verify tier status column,,,
+141,btn_Task_ViewSelector,"Click the [<Object>] ",clickByJS,,,Tasks_View
+142,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+143,Integration_Created_in_Past_48_Hours,Assert if [<Object>] is present,clickByJS,,,Tasks_View
+144,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+145,Execute,,Tasks_RC:Verify tier status column,,,
+146,btn_Task_ViewSelector,"Click the [<Object>] ",clickByJS,,,Tasks_View
+147,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+148,My_Contacts_This_Month,Assert if [<Object>] is present,clickByJS,,,Tasks_View
+149,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+150,Execute,,Tasks_RC:Verify tier status column,,,
+151,btn_Task_ViewSelector,"Click the [<Object>] ",clickByJS,,,Tasks_View
+152,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+153,My_Contacts-This_Quarter,Assert if [<Object>] is present,clickByJS,,,Tasks_View
+154,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+155,Execute,,Tasks_RC:Verify tier status column,,,
+156,btn_Task_ViewSelector,"Click the [<Object>] ",clickByJS,,,Tasks_View
+157,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+158,My_Contacts_Today_view,Assert if [<Object>] is present,clickByJS,,,Tasks_View
+159,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+160,Execute,,Tasks_RC:Verify tier status column,,,
+161,btn_Task_ViewSelector,"Click the [<Object>] ",clickByJS,,,Tasks_View
+162,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+163,My_Open_Cross_Property_Tasks_view,Assert if [<Object>] is present,clickByJS,,,Tasks_View
+164,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+165,Execute,,Tasks_RC:Verify tier status column,,,
+166,btn_Task_ViewSelector,"Click the [<Object>] ",clickByJS,,,Tasks_View
+167,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+168,My_Tasks_Due_in_Next_7_Days,Assert if [<Object>] is present,clickByJS,,,Tasks_View
+169,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+170,Execute,,Tasks_RC:Verify tier status column,,,
+171,btn_Task_ViewSelector,"Click the [<Object>] ",clickByJS,,,Tasks_View
+172,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+173,My_Upcoming_Arrivals_Next 7_Days,Assert if [<Object>] is present,clickByJS,,,Tasks_View
+174,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+175,Execute,,Tasks_RC:Verify tier status column,,,
+"//176",btn_Task_ViewSelector,"Click the [<Object>] ",clickByJS,,,Tasks_View
+"//177",Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+"//178",System_Generated_Tasks,Assert if [<Object>] is present,clickByJS,,,Tasks_View
+"//179",Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+"//180",Execute,,Tasks_RC:Verify tier status column,,,

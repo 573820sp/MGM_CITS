@@ -1,0 +1,6 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+"//1",opt_Task_Activity_Tp,"Click the [<Object>] ",Click,,,Contacts_Entity
+2,btn_CreateTimelineRecord,"Click the [<Object>] ",Click,,,Contacts_Entity
+3,Browser,Wait for [<Data>] milli seconds,pause,@1000,,
+4,opt_TaskActivity,Click on [<Object>],clickByJS,,,Contacts_Entity
+5,Browser,Wait for [<Data>] milli seconds,pause,@2000,,

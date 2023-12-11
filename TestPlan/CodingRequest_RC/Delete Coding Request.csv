@@ -1,0 +1,15 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+1,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+"//2",txt_SelectedRegarding,"Click the [<Object>] ",ClickIfExists,,,Tasks_Entity
+3,Browser,Wait for [<Data>] milli seconds,pause,@4000,,
+4,tab_HostRelationship,"Click the [<Object>] ",Click,,,Contacts_Entity
+5,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+6,Chk_btn_Coding_Request_,"Click the [<Object>] ",clickByJS,,,Contacts_Entity
+7,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+8,btn_More_Coding_Request,"Click the [<Object>] ",Click,,,Tasks_View
+9,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+"//10",Execute,,Tasks_RC:Delete record from commandbar,,,
+11,btn_Delete_Coding_request,"Click the [<Object>] ",Click,,,Tasks_View
+12,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+13,btn_Task_Delete,"Click the [<Object>] ",Click,,,Tasks_Entity
+14,Browser,Wait for [<Data>] milli seconds,pause,@7000,,

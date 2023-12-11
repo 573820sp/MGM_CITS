@@ -1,0 +1,22 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+1,Execute,,Login_RC:Log in to MS Dynamics App with LEM User,,,
+2,Execute,,Login_RC:Select MGM LEM Dynamics App from App List,,,
+3,Execute,,ContactLookup_RC:Clicks on ContactLookup button on left side panel,,,
+4,Execute,,ContactLookup_RC:Search Mgm id in contact loopup  for contact record,,,
+5,txt_MGM_ID,Assert if [<Object>]'s Text Contains [Ignorecase] [<Data>],assertElementTextIContains,%mgmid%,,ContactLite_CIDL
+6,Browser,"Capture the CIDL Contact details from Contact Lite page. ",MSCRM_CaptureCIDLContactDetails,,,
+7,btn_CreateTask,Assert if [<Object>] is present,Click,,,ContactLite_CIDL
+8,Browser,Wait for [<Data>] milli seconds,pause,@20000,,
+9,Execute,,Tasks_RC:Fills the Task Subject in the Task creation page,,,
+10,Execute,,Tasks_RC:Fills Task Description Testbox in the Task creation page,,,
+11,Execute,,Tasks_RC:Select Channel option Email,,,
+12,Execute,,Tasks_RC:Select LEM Rejected option in TaskOutcome dropdown,,,
+13,Execute,,Tasks_RC:Verfies the Task completion Comment Textbox and fills some text,,,
+14,Execute,,Tasks_RC:Click on Mark Complete button in commandbar,,,
+15,Browser,Wait for [<Data>] milli seconds,pause,@10000,,
+16,Execute,,Tasks_RC:Click on Task Entity,,,
+17,Execute,,Tasks_RC:Verifies Substatus value is Completed,,,
+18,txt_SubStatus_label,"Click the [<Object>] ",Click,,,Tasks_Entity
+19,App,Perform page down [<Data>]  times,pageDown,@4,,
+20,Browser,"Verify CIDL Data on TASK Contact Info for a contact created from CIDL Contact Lite page. ",MSCRM_VerifyCIDLDataOnTask,,,
+21,Execute,,ContactLookup_RC:Recover the CIDL Data,,,

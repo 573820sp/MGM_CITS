@@ -1,0 +1,33 @@
+Scenario,Flow,Iteration,SubIteration,ContactName,CodingChangeType,RelationshipType,MgmRewards#,ReassignT0
+03-CodingRequest,TC003_LEM_Verify_CodingConflict_with_HardCode_request_ReqHardCode,1,1,Richard Augello,Req. Hard Code,Hard Code,,
+03-CodingRequest,TC004_LEM_Verify_CodingConflict_with_HardCode_request_Req.SoftCode,1,1,Richard Augello,Req. Soft Code,Hard Code,,
+03-CodingRequest,TC005_LEM_Verify_CodingConflict_with_SoftCode_request_ReqHardCode,1,1,Richard Augello,Req. Hard Code,Soft Code,,
+03-CodingRequest,TC006_LEM_Verify_CodingConflict_with_SoftCode_request_ReqSoftCode,1,1,Richard Augello,Req. Soft Code,Soft Code,,
+03-CodingRequest,TC007_LEM_Verify_CodingConflict_with_Hardcode_request_Uncode,1,1,Richard Augello,Uncode,Hard Code,,
+03-CodingRequest,TC008_LEM_Verify_CodingConflict_with_Softcode_request_Uncode,1,1,Richard Augello,Uncode,Soft Code,,
+03-CodingRequest,TC009_LEM_Verify_CodingConflict_with_HardCode_Reassign_request,1,1,Richard Augello,Reassign - See Comments,Hard Code,,Saurabh Kumar
+03-CodingRequest,TC010_LEM_Verify_CodingConflict_with_SoftCode_Reassign_request,1,1,Richard Augello,Reassign - See Comments,Soft Code,,Saurabh Kumar
+01-Tasks,TC005_LEM_Verify_LEM_User_can_create_Task_from_any_Contact,1,1,Richard Augello,Reassign - See Comments,Hard Code,,Saurabh Kumar
+01-Tasks,TC009_LEM_Verify_LEM_User_access_on_Sitemap_and_Entity_options,1,1,Richard Augello,Reassign - See Comments,Hard Code,,Saurabh Kumar
+01-Tasks,TC014_VIPHost_User_create_Task_from_contact,1,1,Wanda A.l.len,Reassign - See Comments,Hard Code,,Saurabh Kumar
+01-Tasks,TC015_VIPHost_Verify_the_Task_layout_page,1,1,Josefina Aguiar,Reassign - See Comments,Hard Code,,Saurabh Kumar
+01-Tasks,TC016_VIPHost_Create_task_not_using_Channel_option,1,1,Richard Augello,Reassign - See Comments,Hard Code,,Saurabh Kumar
+03-CodingRequest,TC012_VIPHost_Verify_Coding_Request_popup_not_populated_for_other_TaskOutcome,1,1,Richard Augello,Reassign - See Comments,Hard Code,,Saurabh Kumar
+03-CodingRequest,TC015_VIPHost_Verify_CodingConflict_with_SoftCode_request_Req. SoftCode,1,1,Richard Augello,Req. Soft Code,Soft Code,,Saurabh Kumar
+03-CodingRequest,TC016_VIPHost_Verify_CodingConflict_with_SoftCode_request_Req. HardCode,1,1,Richard Augello,Req. Hard Code,Soft Code,,Saurabh Kumar
+03-CodingRequest,TC017_VIPHost_Verify_CodingConflict_with_HardCode_request_Req.SoftCode,1,1,Richard Augello,Req. Soft Code,Hard Code,,
+03-CodingRequest,TC018_VIPHost_Verify_CodingConflict_with_HardCode_request_Req.HardCode,1,1,Richard Augello,Req. Hard Code,Hard Code,,Saurabh Kumar
+03-CodingRequest,TC019_VIPHost_Verify_CodingConflict_with_RelationShip_HardCode_Uncode_request,1,1,Richard Augello,Uncode,Hard Code,,Saurabh Kumar
+03-CodingRequest,TC020_VIPHost_Verify_CodingConflict_with_RelationShip_SoftCode_Uncode_request,1,1,Richard Augello,Uncode,Soft Code,,
+03-CodingRequest,TC021_VIPHost_Verify_CodingConflict_with_Reassign_request_HardCode,1,1,Richard Augello,Reassign - See Comments,Hard Code,,Saurabh Kumar
+03-CodingRequest,TC022_VIPHost_Verify_CodingConflict_with_Reassign_request_SoftCode,1,1,Richard Augello,Reassign - See Comments,Soft Code,,Saurabh Kumar
+03-CodingRequest,TC023_VIPHost_Verify_SameProperty_Hardcode_Coding_Request_recod_not_populated,1,1,Michael Abron,Req. Soft Code,Hard Code,,Saurabh Kumar
+03-CodingRequest,TC024_VIPHost_Verify_SameProperty_softcode_Coding_Request_recod_not_populated,1,1,Michael Abron,Req. Hard Code,Soft Code,,Saurabh Kumar
+03-CodingRequest,TC027_LEM_Verify_SameProperty_softcode_Coding_Request_recod_not_populated,1,1,Michael Abron,Req. Hard Code,Soft Code,,Saurabh Kumar
+03-CodingRequest,TC028_LEM_Verify_SameProperty_Hardcode_Coding_Request_recod_not_populated,1,1,Michael Abron,Req. Soft Code,Hard Code,,
+04-Contact,TC003_Admin_Verify_Reservation_Request_From_Contact,1,1,Michael Abron,,,,
+04-Contact,TC004_Admin_Verify_Reservation_Request_Sidemap_SubArea,1,1,Michael Abron,,,,
+04-Contact,TC005_Admin_Create_Reservation_Request_clone,1,1,Michael Abron,,,,
+04-Contact,TC006_VIPHost_Verify_Reservation_Request_From_Contact,1,1,Michael Abron,,,,
+04-Contact,TC007_VIPHost_Verify_Reservation_Request_Sidemap_SubArea,1,1,Michael Abron,,,,
+04-Contact,TC008_VIPHost_Create_Reservation_Request_clone,1,1,Michael Abron,,,,

@@ -1,0 +1,15 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+1,txt_ContactName,Assert if [<Object>]'s Text Contains [Ignorecase] [<Data>],assertElementTextContains,ContactLookup:ContactName,,ContactLite_CIDL
+2,txt_MGM_ID,Assert if [<Object>]'s Text Contains [Ignorecase] [<Data>],assertElementTextIContains,ContactLookup:Rewards#,,ContactLite_CIDL
+3,txt_Email,Assert if [<Object>]'s Text Contains [Ignorecase] [<Data>],assertElementTextContains,ContactLookup:Email,,ContactLite_CIDL
+4,txt_TierStatus,Assert if [<Object>]'s Text Contains [Ignorecase] [<Data>],assertElementTextContains,ContactLookup:TierStatus,,ContactLite_CIDL
+"//5",txt_MobilePhone,Assert if [<Object>]'s Text Contains [Ignorecase] [<Data>],assertElementTextIContains,ContactLookup:MobilePhone,,ContactLite_CIDL
+"//6",txt_HomePhone,Assert if [<Object>]'s Text Contains [Ignorecase] [<Data>],assertElementTextIContains,ContactLookup:HomePhone,,ContactLite_CIDL
+"//7",txt_BusinessPhone,Assert if [<Object>]'s Text Contains [Ignorecase] [<Data>],assertElementTextContains,ContactLookup:BusinessPhone,,ContactLite_CIDL
+"//8",txt_OtherPhone,Assert if [<Object>]'s Text Contains [Ignorecase] [<Data>],assertElementTextIContains,ContactLookup:OtherPhone,,ContactLite_CIDL
+9,txt_BirthDate,Assert if [<Object>]'s Text Contains [Ignorecase] [<Data>],assertElementTextIContains,ContactLookup:BirthDate,,ContactLite_CIDL
+10,txt_StreetAddrress,Assert if [<Object>]'s Text Contains [Ignorecase] [<Data>],assertElementTextIContains,ContactLookup:StreetAddress,,ContactLite_CIDL
+11,txt_CityStateZip,Assert if [<Object>]'s Text Contains [Ignorecase] [<Data>],assertElementTextIContains,ContactLookup:CityStateZip,,ContactLite_CIDL
+12,btn_Back,Assert if [<Object>] is present,assertElementPresent,,,ContactLite_CIDL
+13,btn_CreateTask,Assert if [<Object>] is present,assertElementPresent,,,ContactLite_CIDL
+14,btn_ReqSoftCode,Assert if [<Object>] is present,assertElementPresent,,,ContactLite_CIDL

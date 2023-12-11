@@ -1,0 +1,28 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+1,btn_Task_ViewSelector,"Click the [<Object>] ",Click,,,Tasks_View
+2,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+3,opt_MyFollowUpTask_View,"Click the [<Object>] ",Click,,,Tasks_View
+4,Browser,Wait for [<Data>] milli seconds,pause,@12000,,
+5,lbl_Subject_Col,Highlight the element [<Object>],highlight,,,Tasks_View
+6,lbl_Subject_Col,Assert if [<Object>] is present,assertElementPresent,,,Tasks_View
+7,lbl_MGM_Rewards_Col,Highlight the element [<Object>],highlight,,,Tasks_View
+8,lbl_MGM_Rewards_Col,Assert if [<Object>] is present,assertElementPresent,,,Tasks_View
+9,lbl_Regarding_Col,Highlight the element [<Object>],highlight,,,Tasks_View
+10,lbl_Regarding_Col,Assert if [<Object>] is present,assertElementPresent,,,Tasks_View
+11,lbl_DueDate_Col,Highlight the element [<Object>],highlight,,,Tasks_View
+12,lbl_DueDate_Col,Assert if [<Object>] is present,assertElementPresent,,,Tasks_View
+13,lbl_CreatedOn_Col,Highlight the element [<Object>],highlight,,,Tasks_View
+14,lbl_CreatedOn_Col,Assert if [<Object>] is present,assertElementPresent,,,Tasks_View
+15,btn_EditFilter,Highlight the element [<Object>],highlight,,,Tasks_View
+16,btn_EditFilter,"Click the [<Object>] ",Click,,,Tasks_View
+17,Browser,Wait for [<Data>] milli seconds,pause,@10000,,
+18,txt_FilterActiveStatus_Open,Assert if [<Object>] is present,waitForElementToBePresent,,20,Tasks_View
+19,txt_FilterActiveStatus_Open,Assert if [<Object>] is present,assertElementPresent,,,Tasks_View
+20,txt_FilterActiveStatus_Open,Highlight the element [<Object>],highlight,,,Tasks_View
+21,txt_FilterOwnerEqualsCurrentUser,Assert if [<Object>] is present,assertElementPresent,,,Tasks_View
+22,txt_FilterOwnerEqualsCurrentUser,Highlight the element [<Object>],highlight,,,Tasks_View
+23,txt_FilterSubject_Begins_Follow,Assert if [<Object>] is present,assertElementPresent,,,Tasks_View
+24,txt_FilterSubject_Begins_Follow,Highlight the element [<Object>],highlight,,,Tasks_View
+25,btn_Cancel_Edit_Filter,Highlight the element [<Object>],highlight,,,Tasks_View
+26,btn_Cancel_Edit_Filter,"Click the [<Object>] ",Click,,,Tasks_View
+27,Browser,Wait for [<Data>] milli seconds,pause,@2000,,

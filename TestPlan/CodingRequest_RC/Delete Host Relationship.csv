@@ -1,0 +1,9 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+1,Checkbox_Host_Relationship,Click on [<Object>],clickByJS,,,Contacts_Entity
+2,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+3,Morecommand_Host_Relationship,"Click the [<Object>] ",Click,,,Contacts_Entity
+4,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+5,btn_Delete_HostRelationship,"Click the [<Object>] ",Click,,,Contacts_Entity
+6,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+7,btn_Task_Delete,"Click the [<Object>] ",Click,,,Tasks_Entity
+8,Browser,Wait for [<Data>] milli seconds,pause,@3000,,

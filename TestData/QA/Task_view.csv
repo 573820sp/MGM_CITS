@@ -1,0 +1,7 @@
+Scenario,Flow,Iteration,SubIteration,Contact,Owner,Segment,Email
+01-Tasks,TC021_VIPHost_Verify_Multiple_Task_set_Regarding,1,1,A Basciano,A Basciano,,
+01-Tasks,TC023_VIPHost_Verify_Multiple_Task_CreateSegments_Addsegments,1,1,A Basciano,A Basciano,,
+05-OtherScenario,TC001_VIPHost_creating_a_Segment_customer_journey_in_general_tab_lock_the_time_zone,1,1,A Basciano,Siddha Sahadev Panda,,
+05-OtherScenario,TC002_VIPHost_Creaing_Marketing_Email,1,1,A Basciano,Siddha Sahadev Panda," ",
+05-OtherScenario,TC003_VIPHost_Creating_Coustomer_journal,1,1,,Siddha Sahadev Panda,Test_9W5MP237,Email_KM4ZJY74
+05-OtherScenario,TC005_LEM_creating_a_customer_journey_in_general_tab_lock_the_time_zone,1,1,,Siddha Sahadev Panda,Test_9W5MP237,Email_KM4ZJY74

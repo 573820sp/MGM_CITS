@@ -1,0 +1,7 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+1,btn_CloseAndActivity_taskPreferece,"Click the [<Object>] ",Click,,,Contacts_Entity
+2,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+3,txt_dialogMessage,Highlight the element [<Object>],highlight,,,Contacts_Entity
+4,txt_dialogMessage,Assert if [<Object>] is present,assertElementPresent,,,Contacts_Entity
+5,btn_Ok,"Click the [<Object>] ",Click,,,Contacts_Entity
+6,Browser,Wait for [<Data>] milli seconds,pause,@3000,,

@@ -1,0 +1,52 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+1,Execute,,Login_RC:Log in to MS Dynamics App with LEM User,,,
+2,Execute,,Login_RC:Select MGM Host Dynamics App from App List,,,
+3,Browser,"Open the Entity from Sitemap Sub-area in MSCRM. ",MSCRM_OpenSitemapSubArea,@Customer Journeys,,
+4,Browser,Wait for [<Data>] milli seconds,pause,@17000,,
+5,Browser,"Select the option from MSCRM Commandbar. ",MSCRM_SelectCommandbarOption,@New,,
+6,Browser,Wait for [<Data>] milli seconds,pause,@17000,,
+7,Select_button,"Click the [<Object>] ",Click,,,Marketing_view
+8,Browser,Wait for [<Data>] milli seconds,pause,@10000,,
+9,btn_Segment_CJ,"Click the [<Object>] ",Click,,,Marketing_view
+10,Browser,Wait for [<Data>] milli seconds,pause,@5000,,
+11,Ok_button,"Click the [<Object>] ",ClickIfExists,,,Marketing_view
+12,Browser,Add a variable to access within testcase,AddVar,Task_view:Segment,%Segment%,
+13,Segment_lookup,Enter the value [<Data>] in the Field [<Object>],Click,,,Marketing_view
+14,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+15,Segment_lookup,Enter the value [<Data>] in the Field [<Object>],clear,,,Marketing_view
+16,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+17,Segment_lookup,Enter the value [<Data>] in the Field [<Object>],Set,%Segment%,,Marketing_view
+18,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+19,Browser,"Click the [<Object>] ",ClickOnRandomElement,%Segment%,//span/span[text()=';'],
+20,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+21,Browser,"Select the option from MSCRM Commandbar. ",MSCRM_SelectCommandbarOption,@Save,,
+22,Browser,Wait for [<Data>] milli seconds,pause,@13000,,
+23,btn_select_Email,"Click the [<Object>] ",Click,,,Marketing_view
+24,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+25,Browser,Add a variable to access within testcase,AddVar,Task_view:Email,%Email%,
+26,textbox_Email_CJ,Enter the value [<Data>] in the Field [<Object>],Click,,,Marketing_view
+27,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+28,textbox_Email_CJ,Enter the value [<Data>] in the Field [<Object>],clear,,,Marketing_view
+29,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+30,textbox_Email_CJ,Enter the value [<Data>] in the Field [<Object>],Set,%Email%,,Marketing_view
+31,Browser,Wait for [<Data>] milli seconds,pause,@5000,,
+32,Advance_Lookup_Email_button,"Click the [<Object>] ",Click,,,Marketing_view
+33,Browser,Wait for [<Data>] milli seconds,pause,@13000,,
+34,checkbox_btn,Click on [<Object>],clickByJS,,,Marketing_view
+35,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+"//36",Browser,Click on the Random Variable that is matching with the Xpath provided,ClickOnRandomElement,%Email%,//div/span[text()=';'],
+37,btn_Done,"Click the [<Object>] ",Click,,,Marketing_view
+38,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+39,Browser,"Select the option from MSCRM Commandbar. ",MSCRM_SelectCommandbarOption,@Save,,
+40,Browser,Wait for [<Data>] milli seconds,pause,@7000,,
+41,btn_SubmitForApproval,Assert if [<Object>] is present,assertElementPresent,,,Marketing_view
+42,btn_SubmitForApproval,Highlight the element [<Object>],highlight,,,Marketing_view
+43,btn_Approve,Assert if [<Object>] is present,assertElementPresent,,,Marketing_view
+44,btn_Approve,Highlight the element [<Object>],highlight,,,Marketing_view
+45,btn_Reject,Assert if [<Object>] is present,assertElementPresent,,,Marketing_view
+46,btn_Reject,Highlight the element [<Object>],highlight,,,Marketing_view
+47,Browser,"Select the option from MSCRM Commandbar. ",MSCRM_SelectCommandbarOption,@Go Live!,,
+48,Browser,Wait for [<Data>] milli seconds,pause,@39000,,
+49,Browser,"Take a Screen Shot ",takeScreenshot,,,
+50,Browser,"Verify the Element is present on the page for the Xpath provided. ",VerifyRandomElementIsPresent,%Segment%,//span[text()='Contact is a member of the segment']/following-sibling::a[text()=';'],
+51,Browser,"Verify the Element is present on the page for the Xpath provided. ",VerifyRandomElementIsPresent,%Email%,//span[text()='Send an email']/following-sibling::span[text()=';'],

@@ -1,0 +1,42 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+1,btn_Edit_Coulmn_Filter,"Click the [<Object>] ",Click,,,Contacts_View
+2,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+3,Browser,Scroll to bottom,scrollToBottom,,,
+4,btn_Coding_Conflict_More,"Click the [<Object>] ",clickByJS,,,CodingRequest_View
+5,btn_MoveUp,"Click the [<Object>] ",clickAndWait,,,CodingRequest_View
+6,Browser,Wait for [<Data>] milli seconds,pause,@3000,,CodingRequest_Popup
+7,btn_Coding_Conflict_More,"Click the [<Object>] ",clickByJS,,,CodingRequest_View
+8,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+9,btn_MoveUp,"Click the [<Object>] ",clickByJS,,,CodingRequest_View
+10,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+11,btn_Coding_Conflict_More,"Click the [<Object>] ",clickByJS,,,CodingRequest_View
+12,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+13,btn_MoveUp,"Click the [<Object>] ",clickByJS,,,CodingRequest_View
+14,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+15,btn_Coding_Conflict_More,"Click the [<Object>] ",clickByJS,,,CodingRequest_View
+16,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+17,btn_MoveUp,"Click the [<Object>] ",clickByJS,,,CodingRequest_View
+18,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+19,btn_Coding_Conflict_More,"Click the [<Object>] ",clickByJS,,,CodingRequest_View
+20,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+21,btn_MoveUp,"Click the [<Object>] ",clickByJS,,,CodingRequest_View
+22,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+23,btn_Coding_Conflict_More,"Click the [<Object>] ",clickByJS,,,CodingRequest_View
+24,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+25,btn_MoveUp,"Click the [<Object>] ",clickByJS,,,CodingRequest_View
+26,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+27,btn_Coding_Conflict_More,"Click the [<Object>] ",clickByJS,,,CodingRequest_View
+28,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+29,btn_MoveUp,"Click the [<Object>] ",clickByJS,,,CodingRequest_View
+30,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+31,btn_Coding_Conflict_More,"Click the [<Object>] ",clickByJS,,,CodingRequest_View
+32,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+33,btn_MoveUp,"Click the [<Object>] ",clickByJS,,,CodingRequest_View
+34,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+35,btn_Coding_Conflict_More,"Click the [<Object>] ",clickByJS,,,CodingRequest_View
+36,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+37,btn_MoveUp,"Click the [<Object>] ",clickByJS,,,CodingRequest_View
+38,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+39,btn_Apply,Click the [<Object>] and Wait for Page to be loaded,clickByJS,,,CodingRequest_View
+40,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+41,Browser,Wait for [<Data>] milli seconds,changeWaitTime,@20,,

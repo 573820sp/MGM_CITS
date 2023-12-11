@@ -1,0 +1,40 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+1,Execute,,Login_RC:Log in to MS Dynamics App with LEM User,,,
+2,Execute,,Login_RC:Select MGM Host Dynamics App from App List,,,
+3,Execute,,Tasks_RC:Click on Task Entity,,,
+4,Execute,,Tasks_RC:Click on Task button in commandbar,,,
+5,Execute,,Tasks_RC:Fills the Task Subject in the Task creation page,,,
+6,Execute,,Tasks_RC:Fills Task Description Testbox in the Task creation page,,,
+7,Execute,,Tasks_RC:Fills Player Lookup field in the Task creation page,,,
+8,ddl_TaskOutCome,"Click the [<Object>] ",selectByVisibleText,Tasks:TaskOutcome,,Tasks_Entity
+9,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+10,Execute,,Tasks_RC:Verfies the Task completion Comment Textbox and fills some text,,,
+11,Execute,,Tasks_RC:Click on Save button,,,
+"//12",Execute,,Tasks_RC:Click on Flow button,,,
+13,Execute,,Tasks_RC:Click on Clone a Task,,,
+"//14",Execute,,Tasks_RC:Click on OK button in Confirm Application of Workflow pop up,,,
+"//15",Browser,"Select the option from MSCRM Commandbar. ",MSCRM_SelectCommandbarOption,@Clone,,
+16,Execute,,Tasks_RC:Verifies that clone Task has been created,,,
+17,radio_btn_SelectTask,Click on [<Object>],clickByJS,,,Tasks_View
+18,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+19,Browser,"Select the option from MSCRM Commandbar. ",MSCRM_SelectCommandbarOption,@Set Regarding,,
+20,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+21,Browser,"Select Lookup Item ",MSCRM_SelectFromLookup,Task_view:Contact,regarding_id,
+22,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+23,btn_Set,"Click the [<Object>] ",Click,,,Tasks_View
+24,Browser,Wait for [<Data>] milli seconds,pause,@7000,,
+"//25",txt_FilterByKeyword,Enter the value [<Data>] in the Field [<Object>],Set,%Subject%,,Tasks_View
+"//26",Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+"//27",btn_Arrow,"Click the [<Object>] ",Click,,,Tasks_View
+"//28",Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+29,Browser,"Creating Random Variable ",ClickOnRandomElement,%Subject%,(//div/span[text()=';'])[2],
+30,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+31,txt_SelectedRegarding,Assert if [<Object>]'s Text Contains [<Data>],assertElementTextContains,Task_view:Contact,,Tasks_Entity
+32,Execute,,Tasks_RC:Verifies that clone Task has been created,,,
+33,Browser,"Creating Random Variable ",ClickOnRandomElement,%Subject%,(//div/span[text()=';'])[1],
+34,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+35,txt_SelectedRegarding,Assert if [<Object>]'s Text Contains [<Data>],assertElementTextContains,Task_view:Contact,,Tasks_Entity
+36,Execute,,Tasks_RC:Verifies that clone Task has been created,,,
+37,radio_btn_SelectTask,Click on [<Object>],clickByJS,,,Tasks_View
+38,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+39,Execute,,Tasks_RC:Delete record from commandbar,,,

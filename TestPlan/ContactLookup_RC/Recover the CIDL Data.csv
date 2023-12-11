@@ -1,0 +1,16 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+"//1",btm_Change_user,"Click the [<Object>] ",Click,,,AppList_Sitemap
+"//2",Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+"//3",tile_MGM_Admin_Dynamics,"Click the [<Object>] ",Click,,,AppList_Sitemap
+"//4",Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+5,Browser,"Open the Entity from Sitemap Sub-area in MSCRM. ",MSCRM_OpenSitemapSubArea,@Contact Lookup,,
+6,Browser,Wait for [<Data>] milli seconds,pause,@10000,,
+7,txt_MGM_Rewards,"Wait for [<Object>] to be clickable ",waitForElementToBeVisible,,,ContactLookup
+8,Browser,Add a variable to access within testcase,AddVar,ContactLookup:RewardsSearch,%mgmid%,
+9,txt_MGM_Rewards,Enter the value [<Data>] in the Field [<Object>],Set,ContactLookup:RewardsSearch,,ContactLookup
+10,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+11,btn_Search,"Click the [<Object>] ",Click,,,ContactLookup
+12,Browser,Wait for [<Data>] milli seconds,pause,@32000,,
+13,btn_MoreCommand,"Click the [<Object>] ",Click,,,Tasks_View
+14,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+15,Execute,,Tasks_RC:Delete record from commandbar,,,

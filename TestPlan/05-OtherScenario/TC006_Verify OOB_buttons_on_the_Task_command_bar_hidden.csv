@@ -1,0 +1,14 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+1,Execute,,Login_RC:Log in to MS Dynamics App with LEM User,,,
+2,Execute,,Login_RC:Select MGM LEM Dynamics App from App List,,,
+3,Browser,"Select the option from MSCRM Commandbar. ",MSCRM_OpenSitemapSubArea,@Tasks,,
+4,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+5,2nd_record_task_radio_button,"Click the [<Object>] ",Click,,,Tasks_View
+6,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+7,btn_MoreCommand,"Click the [<Object>] ",Click,,,Tasks_View
+8,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+9,Set_Regarding_commandbar,Assert if [<Object>] is not present,assertElementNotPresent,,,Tasks_View
+10,Email_a_link_commandbar,Assert if [<Object>] is not present,assertElementNotPresent,,,Tasks_View
+11,Add_to_Queue_commandbar,Assert if [<Object>] is not present,assertElementNotPresent,,,Tasks_View
+12,btm_Change_user,"Click the [<Object>] ",Click,,,AppList_Sitemap
+13,Browser,Wait for [<Data>] milli seconds,pause,@2000,,

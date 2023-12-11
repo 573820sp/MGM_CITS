@@ -1,0 +1,6 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+"//1",HeaderPicture_signout,"Click the [<Object>] ",Click,,,App_Menu
+"//2",Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+"//3",Signout_button,"Click the [<Object>] ",Click,,,App_Menu
+4,Browser,Close the current window and switch to default window,StopBrowser,,,
+5,Browser,Wait for [<Data>] milli seconds,pause,@8000,,

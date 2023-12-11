@@ -1,0 +1,6 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+"//1",tile_MGM_Admin_Dynamics,"Click the [<Object>] ",waitForElementToBePresent,,40,AppList_Sitemap
+2,Browser,Scroll to bottom,scrollToBottom,,,
+3,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+4,tile_MGM_Admin_Dynamics,"Click the [<Object>] ",clickByJS,,,AppList_Sitemap
+5,Browser,Wait for [<Data>] milli seconds,pause,@10000,,

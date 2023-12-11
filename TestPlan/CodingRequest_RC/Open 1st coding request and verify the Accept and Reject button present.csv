@@ -1,0 +1,13 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+1,btn_EditFilter,"Click the [<Object>] ",Click,,,Tasks_View
+2,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+3,btn_MoreCommand_EditFilter,"Click the [<Object>] ",Click,,,Tasks_View
+4,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+5,btn_Delete_EditFilter,"Click the [<Object>] ",Click,,,Tasks_View
+6,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+7,btn_Apply,"Click the [<Object>] ",Click,,,CodingRequest_View
+8,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+9,row_1st_record_CodingRequest,"Wait for [<Object>] to be invisible ",waitForElementToBeInVisible,,,CodingRequest_View
+"//10",row_1st_record_CodingRequest,Double click [<Object>] element,Click,,,CodingRequest_View
+11,btn_Approve,Verify if [<Object>] element is present,verifyElementPresent,,,CodingRequest_View
+12,btn_Reject,Assert if [<Object>] is present,assertElementPresent,,,CodingRequest_View

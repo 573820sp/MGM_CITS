@@ -1,0 +1,7 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+"//1",tile_MGM_LEM_Dynamics,"Click the [<Object>] ",waitForElementToBePresent,,60,AppList_Sitemap
+2,Browser,Wait for [<Data>] milli seconds,pause,@4000,,
+3,tile_MGM_LEM_Dynamics,"Click the [<Object>] ",clickByJS,,,AppList_Sitemap
+4,Browser,Wait for [<Data>] milli seconds,pause,@10000,,
+5,lnk_LEM_App,Wait  for the element [<Object>] to be present,waitForElementToBePresent,,40,AppList_Sitemap
+"//6",Browser,Open the Url [<Data>] in the Browser,Open,@https://mgmhosttest.crm.dynamics.com/,,

@@ -1,0 +1,8 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+1,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+2,txt_Email,Enter the value [<Data>] in the Field [<Object>],Set,ContactLookup:EmailSearch,,ContactLookup
+3,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+4,btn_Search,"Click the [<Object>] ",Click,,,ContactLookup
+5,Browser,Wait for [<Data>] milli seconds,pause,@23000,,
+6,lbl_ErrorMsg_notification,Assert if [<Object>] is present,assertElementPresent,,,ContactLookup
+7,txt_Email,Enter the value [<Data>] in the Field [<Object>],clearByJS,,,ContactLookup

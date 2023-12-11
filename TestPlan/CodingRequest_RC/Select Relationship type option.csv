@@ -1,0 +1,5 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+1,ddl_RelationshipType,"Click the [<Object>] ",selectByVisibleText,CodingRequest:RelationshipType,,CodingRequests_Entity
+2,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+"//3",SoftCode_option,"Click the [<Object>] ",clickAndWait,,,CodingRequest_Popup
+"//4",Browser,Wait for [<Data>] milli seconds,pause,@6000,,

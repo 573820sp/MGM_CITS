@@ -1,0 +1,12 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+1,txt_ContactName,Assert if [<Object>]'s Text Contains [Ignorecase] [<Data>],storeText,%ContactName%,,ContactLite_CIDL
+2,txt_MGM_ID,Assert if [<Object>]'s Text Contains [Ignorecase] [<Data>],storeText,%Rewards_CIDL%,,ContactLite_CIDL
+3,txt_Email,Assert if [<Object>]'s Text Contains [Ignorecase] [<Data>],storeText,%Email_CIDL%,,ContactLite_CIDL
+4,txt_TierStatus,Assert if [<Object>]'s Text Contains [Ignorecase] [<Data>],storeText,%TierStatus_CIDL%,,ContactLite_CIDL
+5,txt_MobilePhone,Assert if [<Object>]'s Text Contains [Ignorecase] [<Data>],storeText,%MobilePhone_CIDL%,,ContactLite_CIDL
+6,txt_HomePhone,Assert if [<Object>]'s Text Contains [Ignorecase] [<Data>],storeText,%HomePhone_CIDL%,,ContactLite_CIDL
+7,txt_BusinessPhone,Assert if [<Object>]'s Text Contains [Ignorecase] [<Data>],storeText,%BusinessPhone_CIDL%,,ContactLite_CIDL
+8,txt_OtherPhone,Assert if [<Object>]'s Text Contains [Ignorecase] [<Data>],storeText,%OtherPhone_CIDL%,,ContactLite_CIDL
+9,txt_BirthDate,Assert if [<Object>]'s Text Contains [Ignorecase] [<Data>],storeText,%BirthDate_CIDL%,,ContactLite_CIDL
+10,txt_StreetAddrress,Assert if [<Object>]'s Text Contains [Ignorecase] [<Data>],storeText,%StreetAddress_CIDL%,,ContactLite_CIDL
+11,txt_CityStateZip,Assert if [<Object>]'s Text Contains [Ignorecase] [<Data>],storeText,%CityStateZip_CIDL%,,ContactLite_CIDL

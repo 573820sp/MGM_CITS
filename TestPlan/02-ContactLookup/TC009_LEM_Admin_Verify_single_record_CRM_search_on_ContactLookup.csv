@@ -1,0 +1,19 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+1,Execute,,Login_RC:Log in to MS Dynamics App with LEM User,,,
+2,Execute,,Login_RC:Select MGM Admin Dynmics from app list,,,
+3,Execute,,ContactLookup_RC:Clicks on ContactLookup button on left side panel,,,
+4,Execute,,ContactLookup_RC:Search Mgm id in contact loopup  for contact record,,,
+5,hdr_Contact,Assert if [<Object>] is present,waitForElementToBePresent,,40,Contacts_Entity
+"//6",hdr_Contact,Assert if [<Object>] is present,assertElementPresent,,,Contacts_Entity
+7,Browser,"Creating Random Variable ",VerifyRandomElementIsPresent,ContactLookup:RewardsSearch,"//div[contains(text(),'MGM Rewards')]/preceding-sibling::div/div[text()=';']",
+8,txt_MGM_Rewards,Assert if [<Object>] is present,assertElementPresent,,,Contacts_Entity
+9,Execute,,ContactLookup_RC:Clicks on ContactLookup button on left side panel,,,
+10,Execute,,ContactLookup_RC:Search Email address in contact lookup,,,
+11,hdr_Contact,Assert if [<Object>] is present,waitForElementToBePresent,,40,Contacts_Entity
+"//12",hdr_Contact,Assert if [<Object>] is present,assertElementPresent,,,Contacts_Entity
+13,Browser,"Creating Random Variable ",VerifyRandomElementIsPresent,ContactLookup:EmailSearch,//label[text()='Email']/../../../following-sibling::div//input[@title=';'],
+14,Execute,,ContactLookup_RC:Clicks on ContactLookup button on left side panel,,,
+15,Execute,,ContactLookup_RC:Search Phone in contact lookup,,,
+"//16",Browser,"Creating Random Variable ",VerifyRandomElementIsPresent,ContactLookup:PhoneSearch,//label[text()='Mobile Phone']/../../../following-sibling::div//input[@title=';'],
+17,hdr_Contact,Assert if [<Object>] is present,waitForElementToBePresent,,40,Contacts_Entity
+18,hdr_Contact,Assert if [<Object>] is present,assertElementPresent,,,Contacts_Entity

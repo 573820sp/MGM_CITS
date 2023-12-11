@@ -1,0 +1,37 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+1,Execute,,Login_RC:Log in to MS Dynamics App with LEM User,,,
+2,Execute,,Login_RC:Select MGM Host Dynamics App from App List,,,
+3,Execute,,ContactLookup_RC:Clicks on ContactLookup button on left side panel,,,
+4,Execute,,ContactLookup_RC:Search Mgm id in contact loopup  for contact record,,,
+5,txt_MGM_ID,Assert if [<Object>]'s Text Contains [Ignorecase] [<Data>],waitForElementToBeVisible,,30,ContactLite_CIDL
+6,txt_MGM_ID,Assert if [<Object>]'s Text Contains [Ignorecase] [<Data>],assertElementTextIContains,%mgmid%,,ContactLite_CIDL
+7,Execute,,ContactLookup_RC:Capture all Contact details from Contact Lite page,,,
+8,Browser,"Capture the CIDL Contact details from Contact Lite page. ",MSCRM_CaptureCIDLContactDetails,,,
+9,btn_ReqSoftCode,Assert if [<Object>] is present,Click,,,ContactLite_CIDL
+10,Browser,Wait for [<Data>] milli seconds,pause,@20000,,
+11,Execute,,CodingRequest_RC:Verifies default values on Coding Request popup from ContactLite page,,,
+12,btn_QuickCreateCancel,Assert if [<Object>] is present,Click,,,CodingRequests_Entity
+13,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
+14,btn_DiscardChanges,"Click the [<Object>] ",Click,,,CodingRequests_Entity
+15,Browser,Wait for [<Data>] milli seconds,pause,@5000,,
+16,hdr_Contact,Wait  for the element [<Object>] to be present,waitForElementToBePresent,,40,Contacts_Entity
+17,hdr_ContactName,Assert if [<Object>]'s Text Contains [<Data>],assertElementTextContains,%ContactName%,,Contacts_Entity
+18,txt_MGM_Rewards,Assert if [<Object>]'s Text Contains [<Data>],assertElementTextContains,%mgmid%,,Contacts_Entity
+19,tab_QuickPreferences,Hover over the [<Object>] element,Click,,,Contacts_Entity
+20,App,"Press [<Data>] key on keyboard ",pageDown,@10,,
+21,App,"Press [<Data>] key on keyboard ",keyboardKey,@DOWN,,
+22,App,"Press [<Data>] key on keyboard ",keyboardKey,@DOWN,,
+23,App,"Press [<Data>] key on keyboard ",keyboardKey,@DOWN,,
+24,App,"Press [<Data>] key on keyboard ",keyboardKey,@DOWN,,
+25,App,"Press [<Data>] key on keyboard ",keyboardKey,@DOWN,,
+26,App,"Press [<Data>] key on keyboard ",keyboardKey,@DOWN,,
+27,App,"Press [<Data>] key on keyboard ",keyboardKey,@DOWN,,
+28,App,"Press [<Data>] key on keyboard ",keyboardKey,@DOWN,,
+29,App,"Press [<Data>] key on keyboard ",keyboardKey,@DOWN,,
+30,App,"Press [<Data>] key on keyboard ",keyboardKey,@DOWN,,
+31,App,"Press [<Data>] key on keyboard ",keyboardKey,@DOWN,,
+32,App,"Press [<Data>] key on keyboard ",keyboardKey,@DOWN,,
+33,App,"Press [<Data>] key on keyboard ",keyboardKey,@DOWN,,
+34,Browser,Wait for [<Data>] milli seconds,pause,@10000,,
+35,Browser,"Verify the CIDL data on CONTACT created from CIDL Contact Lite page. ",MSCRM_VerifyCIDLDataOnContact,,,
+36,Execute,,ContactLookup_RC:Recover the CIDL Data,,,

@@ -1,0 +1,12 @@
+Step,ObjectName,Description,Action,Input,Condition,Reference
+1,Browser,Wait for [<Data>] milli seconds,pause,@8000,,
+2,lbl_Regarding_Col,Assert if [<Object>] is present,assertElementPresent,,,Tasks_View
+3,lbl_Regarding_Col,Highlight the element [<Object>],highlight,,,Tasks_View
+4,Tier_Status_column,Assert if [<Object>] is present,assertElementPresent,,,Tasks_View
+5,Tier_Status_column,Highlight the element [<Object>],highlight,,,Tasks_View
+6,btn_Edit_Coulmn_Filter,"Click the [<Object>] ",clickByJS,,,Contacts_View
+7,Browser,Wait for [<Data>] milli seconds,pause,@3000,,
+8,Tier_status_col_EditColumn,Assert if [<Object>] is present,assertElementPresent,,,Tasks_Entity
+9,Tier_status_col_EditColumn,Highlight the element [<Object>],highlight,,,Tasks_Entity
+10,btn_Cancel_Edit_Column,"Click the [<Object>] ",clickByJS,,,Contacts_View
+11,Browser,Wait for [<Data>] milli seconds,pause,@2000,,
